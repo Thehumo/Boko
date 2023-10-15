@@ -346,17 +346,17 @@ img{border: none;}
   margin-top: 70px;
 }
 .single_features_responsive img{
-  margin-top: 70px;
+  margin-top: 0px;
 }
 .single_features_responsive h2 {
   color: #666666;
   font-size: 30px;
-  margin-top: 49px;
+  margin-top: 5px;
 }
 .single_features_responsive p {
   color: #606060;
   font-size: 15px;
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: justify;
 }
 
@@ -1202,8 +1202,8 @@ img{border: none;}
 @media(max-width:991px){
   .custom_nav {margin-top: 0;margin-bottom: 10px;}
   .custom_nav li a { font-size: 14px;margin-left: 2px;margin-right: 2px;}
-  .single_features_responsive {margin-bottom: 75px;}
-  .featprodcs_content {margin-top: 75px;}
+  .single_features_responsive {margin-bottom: 55px;}
+  .featprodcs_content {margin-top: 55px;}
   .secondfeatures_prodsarea { margin-top: 75px;}
   .appdownload_area { margin-top: 50px;}
   .app_area { padding-bottom: 50px;}
