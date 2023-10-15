@@ -266,18 +266,20 @@ img{border: none;}
 .slide_descleft{
   float: left;
   display: inline;
-  width: 40%;
+  width: 20%;
 }
 .slide_descright{
   float: right;
   display: inline;
-  width: 58%;
+  width: 78%;
   margin-top: 15%;
 }
-.slide_descright h1 { 
-  font-size: 45px;
-  text-transform: uppercase;
-}
+	.slide_descright h1 {
+		font-size: 45px;
+		font-weight:bold;
+		text-transform: uppercase;
+		color: #fff;
+	}
 .slide_descright p{
   color: #fff;
   font-size: 25px;
