@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\about",
+    "\\career",
+    "\\career\\apply",
+    "\\images",
+    "\\news",
+    "\\social"
   ],
+  "SelectedNode": "\\style.css",
   "PreviewInSolutionExplorer": false
 }
