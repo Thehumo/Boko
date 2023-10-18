@@ -4,10 +4,11 @@
     "\\about",
     "\\career",
     "\\career\\apply",
+    "\\css",
     "\\images",
-    "\\news",
+    "\\images\\slider",
     "\\social"
   ],
-  "SelectedNode": "\\style.css",
+  "SelectedNode": "\\css\\animate.css",
   "PreviewInSolutionExplorer": false
 }
