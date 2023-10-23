@@ -100,17 +100,17 @@
       <!-- START FEATURES SECTION -->
       <section id="top">
           <div class="container">
-              
+
 
               <!--<p>Lorem ipsum dolor sit amet. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>-->
-              <div class="col-lg-8 col-md-8">
+              <div class="col-lg-7 col-md-7">
                   <div class="featprodcs_content wow fadeInRight">
                       <h2>Human Resources</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis est ut erat dictum, sit amet vulputate ipsum egestas. In hac habitasse platea dictumst. Donec arcu augue, faucibus id nisi in, facilisis pulvinar massa. Maecenas id molestie nunc. Praesent metus justo, elementum rutrum rutrum quis, lacinia quis est. Vivamus ut nulla vel purus rutrum consectetur sit amet sed quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus viverra risus, tristique pharetra nulla pharetra ut. Fusce eu tellus sapien. Curabitur lobortis, risus quis condimentum semper, orci leo sollicitudin metus, in vestibulum purus nulla tempus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
 
                   </div>
                   <div class="featprodcs_content wow fadeInRight">
-                      
+
                       <ul style="line-height:1.8;width:100%;">
                           <li class="fadeInLeft">Praesent molestie erat eu risus vehicula, ac tincidunt massa accumsan. Aenean urna magna, gravida vel ante sed, fringilla ullamcorper orci.<br /><a href="#">APPLY HERE</a></li>
                           <li class="fadeInLeft">Proin tincidunt erat a eros interdum, nec consequat purus congue. Suspendisse leo erat, suscipit id risus vitae<br /><a href="#">APPLY HERE</a></li>
@@ -122,31 +122,71 @@
                   </div>
 
               </div>
-                  <div class="col-lg-4 col-md-4">
+              <div class="col-lg-5 col-md-5">
+                  
+                  <div class="contact_right wow fadeInLeft">
                       <h3>Contact details</h3>
-                      <div class="contact_right wow fadeInLeft">
-                          <div class="media contact_media">
-                              <div class="media-body contact_media_body">
-                                  <h4>Telephone: +27 (0)15 620 0001</h4>
-                              </div>
+                      <div class="media contact_media">
+                          <div class="media-body contact_media_body">
+                              <h4>Telephone: +27 (0)15 620 0001</h4>
                           </div>
-                          <div class="media contact_media">
+                      </div>
+                      <div class="media contact_media">
 
-                              <div class="media-body contact_media_body">
-                                  <h4>WhatsApp:+27 (0)87 250 2184</h4>
-                              </div>
+                          <div class="media-body contact_media_body">
+                              <h4>WhatsApp:+27 (0)87 250 2184</h4>
                           </div>
-                          <div class="media contact_media">
+                      </div>
+                      <div class="media contact_media">
 
-                              <div class="media-body contact_media_body">
-                                  <h4>Web: www.bokoniplatinum.co.za </h4>
-                              </div>
+                          <div class="media-body contact_media_body">
+                              <h4>Web: www.bokoniplatinum.co.za </h4>
                           </div>
                       </div>
                   </div>
-                  <p>&nbsp;</p>
-                  <div class="GeneralBtn">
-                      <a href="#" class="button">&nbsp; &nbsp; Apply &nbsp; &nbsp;</a>
+
+                  <div class="contact_right wow fadeInLeft">
+
+                      <form class="footer_form" id="frmJobApplication" name="frmJobApplication" method="post">
+                          <div class="row">
+                              <div class="col-lg-12 col-md-12">
+                                  <div class="form-group">
+                                      <input id="txtName" name="txtName" type="text" class="form-control" placeholder="Your full name" required>
+                                  </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                  <div class="form-group">
+                                      <input id="txtContactNumber" name="txtContactNumber" type="text" class="form-control" placeholder="Contact number" required>
+                                  </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                  <div class="form-group">
+                                      <input type="datetime-local" id="txtDateOfBirth" name="txtDateOfBirth" class="form-control" placeholder="Your date of birth" required>
+                                  </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12">
+                                  <div class="form-group">
+                                      <input id="txtContactEmail" name="txtContactEmail" type="email" class="form-control" placeholder="Email (Required)" required>
+                                  </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12">
+                                  <div class="form-group">
+                                      <input id="txtPositionAppliedFor" name="txtPositionAppliedFor" type="text" class="form-control" placeholder="Position for which you are applying" required>
+                                  </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12">
+                                  <div class="form-group">
+                                      <input id="fileCV" name="fileCV" type="file" class="form-control" placeholder="Attach your CV here" required>
+                                  </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12">
+                                  <div class="form-group">
+                                      <textarea id="txtResume" name="txtResume" class="form-control" cols="30" rows="5" placeholder="Summary of your resume"></textarea>
+                                  </div>
+                              </div>
+                          </div>
+                          <input class="contact_sendbtn" type="submit" value="Apply">
+                      </form>
                   </div>
 
               </div>
