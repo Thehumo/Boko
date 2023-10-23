@@ -2,13 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\about",
-    "\\career",
     "\\career\\apply",
-    "\\css",
     "\\images",
-    "\\images\\slider",
+    "\\images\\news",
+    "\\news",
     "\\social"
   ],
-  "SelectedNode": "\\css\\animate.css",
+  "SelectedNode": "\\images\\news\\signage.jpg",
   "PreviewInSolutionExplorer": false
 }
