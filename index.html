@@ -666,6 +666,12 @@
       <script src="scripts/wow.min.js"></script>
 
       <!-- Custom js -->
+     <script>
+    (async function() {
+        const { text } = await( await fetch(`/api/message`)).json();
+        document.querySelector('#name').textContent = text;
+    }());
+    </script>
       <script type="text/javascript" src="scripts/custom.js"></script>
 
   </body>
