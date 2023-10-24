@@ -669,7 +669,7 @@
      <script>
     (async function() {
         const { text } = await( await fetch(`/api/HttpBokoContact`)).json();
-        document.querySelector('#name').textContent = text;
+       alert(text);
     }());
     </script>
       <script type="text/javascript" src="scripts/custom.js"></script>
