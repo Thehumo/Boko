@@ -667,10 +667,12 @@
 
       <!-- Custom js -->
      <script>
-    (async function() {
+     (document.getElementById("contactsub").onclick =async () => {
         const { text } = await( await fetch(`/api/HttpBokoContact`)).json();
-       alert(text);
-    }());
+             document.getElementById("footerpara").textContent = text
+
+             
+    });
     </script>
       <script type="text/javascript" src="scripts/custom.js"></script>
 
