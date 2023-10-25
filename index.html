@@ -669,7 +669,7 @@
       <!-- Custom js -->
      <script>
      (document.getElementById("contactsub").onclick =async () => {
-        const { text } = await( await fetch(`/api/HttpBokoContact`)).json();
+        const { text } = await( await fetch(`/api/HttpBokoContact`)).text();
              document.getElementById("footerpara").textContent = text
 
              
