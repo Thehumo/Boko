@@ -284,7 +284,9 @@ img{border: none;}
   color: #fff;
   font-size: 25px;
 }
-
+#file-input {
+	display: none;
+}
 /*--------------------*/
 /* FEATURE SECTION */
 /*--------------------*/
@@ -325,7 +327,7 @@ img{border: none;}
   border: 1px solid #DCDCDC;
   display: inline;
   float: left;
-  padding: 15px 15px;
+  padding: 10px 10px;
   width: 100%;  
   margin-left:0px;
 }
@@ -1204,7 +1206,7 @@ img{border: none;}
 @media(max-width:991px){
   .custom_nav {margin-top: 0;margin-bottom: 10px;}
   .custom_nav li a { font-size: 14px;margin-left: 2px;margin-right: 2px;}
-  .single_features_responsive {margin-bottom: 55px;}
+  .single_features_responsive {margin-bottom: 15px;}
   .featprodcs_content {margin-top: 55px;}
   .secondfeatures_prodsarea { margin-top: 75px;}
   .appdownload_area { margin-top: 50px;}
