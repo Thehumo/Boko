@@ -374,6 +374,23 @@ img{border: none;}
   width: 100%;
 }
 
+.opportunity-table {
+	width: 80%;
+}
+
+.opportunity-title {
+	font-size: 16px;
+	text-align: left;
+	padding: 10px 20px 10px 5px;
+	border-bottom: 1px dashed #c0c0c0;
+}
+
+.opportunity-date {
+	text-align: left;
+	font-size: 16px;
+	padding: 10px 20px 10px 5px;
+	border-bottom: 1px dashed #c0c0c0;
+}
 .featprodcs_img{
   float: left;
   display: inline;
