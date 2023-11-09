@@ -1238,7 +1238,7 @@ img{border: none;}
   .scrollToTop{ right: 5px;}
   .slider_content > p {color: #909090;font-family: 'Roboto-Light';font-size: 18px;padding: 0 53px;}
   .navbar-header {text-align: center;width: 100%;}
-  .navbar-brand {float: none;margin: 11px auto 0 !important;width: 230px;}
+  .navbar-brand {float: none;margin: 8px auto 0 !important;width: 330px;}
   .direction_icon {left: 39%;}
   .slide_descright h1 {font-size: 20px;margin-bottom: 18px;}
   .skdslider .slide-desc{top: 25%;}
@@ -1254,7 +1254,7 @@ img{border: none;}
 
 @media(max-width:767px){
   .custom_nav li a {text-align: center;}
-  .navbar-toggle {float: none !important;}
+  .navbar-toggle {float: right !important;}
   .navbar-default {text-align: center;}
   .logo {margin-bottom: 15px;width: 187px;}
   .header_content h1 {font-size: 36px;}
