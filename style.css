@@ -422,10 +422,18 @@ img{border: none;}
   font-size: 17px;  
   line-height: 32px;
 }
+.procurementOpportunity{
+	background-color:#f9f9f9;
+	border-bottom:1px solid #c0c0c0;
+	margin-top:10px;
+}
+.procurementInfo div {
+	padding: 4px;
+}
 .img-responsive {
-  display: inline-block;
-  height: auto;
-  max-width: 100%;
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
 }
 .clock_icon {
   color: #ffd200;

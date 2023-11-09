@@ -105,6 +105,25 @@
 
 
                     </div>
+
+                    <div class="featprodcs_content wow fadeInLeft">
+                        <h3 style="text-align:left">&nbsp; Current opportunities</h3>
+
+
+                        <div class="wow fadeInLeft" id="opportunitiesContainer"></div>
+
+                        <!--<div class="procurementOpportunity wow fadeInUp">
+        <div class="col-lg-2 col-md-2">
+            <a href="pdf link goes here" target="_blank"><img class="img-responsive" src="../images/pdf-icon.png" alt="img"></a>
+        </div>
+        <div class="procurementInfo col-lg-10 col-md-10">
+            <div>title goes here</div>
+            <div title="PUBLISHED: published date goes here">EXP: expiry date goes here</div>
+            <div>description goes here</div>
+        </div>
+    </div>-->
+
+                    </div>
                 </div>
 
 
@@ -159,7 +178,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input class="contact_sendbtn" type="submit" value="Register as a supplier">
+                            <input class="contact_sendbtn" type="submit" value="Register as a supplier" style="width:auto;float:right">
                         </form>
 
                     </div>
@@ -169,31 +188,23 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
 
-                    <div class="features_responsive">
-                        <h2 style="text-align:left">&nbsp; Current opportunities</h2>
-                        <div class="wow fadeInLeft">
 
-                            <div class="col-lg-6 col-md-6">
-                                <div style="background-color: #c0c0c0;">TENDER ITEM ONE</div>
-                                <div><span style="padding:5px;margin-right: 15px;">ARM-BOK-ABC123/12/23</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                            </div>
 
+                </div>
+            </div>
+
+            <!--
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+
+                        <div class="features_responsive">
+                            <h2 style="text-align:left">&nbsp; Current opportunities</h2>
+                            <div class="wow fadeInLeft" id="opportunitiesContainer"></div>
                         </div>
+
                     </div>
-
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-
-                    <div class="features_responsive">
-                        <h2 style="text-align:left">&nbsp; Current opportunities</h2>
-                        <div class="wow fadeInLeft" id="opportunitiesContainer"></div>
-                    </div>
-
-                </div>
-            </div>
-
+    -->
 
 
 
@@ -307,39 +318,56 @@
 
             // Check if the expiry date is in the future
             if (expiryDate > currentDate) {
-                // Create a div for the opportunity block
-                var opportunityDiv = document.createElement("div");
-                opportunityDiv.className = "col-lg-6 col-md-6";
+                // Create a div for the procurement opportunity
+                var procurementOpportunityDiv = document.createElement("div");
+                procurementOpportunityDiv.className = "procurementOpportunity row wow fadeInUp";
 
-                // Create elements for the opportunity details
-                var title = document.createElement("h3");
-                title.textContent = opportunity.Title;
+                // Create divs for the two columns
+                var iconColumnDiv = document.createElement("div");
+                iconColumnDiv.className = "col-lg-2 col-md-2";
 
-                var description = document.createElement("div");
-                description.textContent = opportunity.Description;
+                var infoColumnDiv = document.createElement("div");
+                infoColumnDiv.className = "procurementInfo col-lg-10 col-md-10";
 
-                var dateInfo = document.createElement("div");
-                dateInfo.innerHTML = "Published: " + opportunity.PublishedDate + "&nbsp; | &nbsp; Expiry: " + opportunity.ExpiryDate;
+                // Create an anchor for the PDF link and an image element
+                var pdfLink = document.createElement("a");
+                pdfLink.href = opportunity.PDFLink;
+                pdfLink.target = "_blank";
 
-                var learnMoreBtnArea = document.createElement("div");
-                learnMoreBtnArea.className = ""; // Add class name for styling
+                var pdfImage = document.createElement("img");
+                pdfImage.className = "img-responsive";
+                pdfImage.src = "../images/pdf-icon.png";
+                pdfImage.alt = "img";
 
-                var learnMoreLink = document.createElement("a");
-                learnMoreLink.href = opportunity.PDFLink;
-                learnMoreLink.textContent = "Read More";
-                learnMoreLink.className = "download_btn"; // Add class name for styling
+                // Append the image to the anchor, and the anchor to the icon column
+                pdfLink.appendChild(pdfImage);
+                iconColumnDiv.appendChild(pdfLink);
 
-                // Construct the elements hierarchy
-                opportunityDiv.appendChild(title);
-                opportunityDiv.appendChild(description);
-                opportunityDiv.appendChild(dateInfo);
-                learnMoreBtnArea.appendChild(learnMoreLink);
-                opportunityDiv.appendChild(learnMoreBtnArea);
+                // Create divs for the procurement information
+                var titleDiv = document.createElement("h4");
+                titleDiv.textContent = opportunity.Title;
 
-                // Append the opportunity block to the container
-                opportunitiesContainer.appendChild(opportunityDiv);
+                var dateInfoDiv = document.createElement("div");
+                dateInfoDiv.title = "PUBLISHED: " + opportunity.PublishedDate;
+                dateInfoDiv.textContent = "EXP: " + opportunity.ExpiryDate;
+
+                var descriptionDiv = document.createElement("div");
+                descriptionDiv.textContent = opportunity.Description;
+
+                // Append the information divs to the info column
+                infoColumnDiv.appendChild(titleDiv);
+                infoColumnDiv.appendChild(dateInfoDiv);
+                infoColumnDiv.appendChild(descriptionDiv);
+
+                // Append the columns to the procurement opportunity div
+                procurementOpportunityDiv.appendChild(iconColumnDiv);
+                procurementOpportunityDiv.appendChild(infoColumnDiv);
+
+                // Append the procurement opportunity div to the container
+                opportunitiesContainer.appendChild(procurementOpportunityDiv);
             }
         });
+
 
 
 
