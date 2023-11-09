@@ -142,10 +142,10 @@ img{border: none;}
 .logo {
   color: #ffffff !important;
   display: block; 
-  font-size: 30px !important;
-  margin-bottom: 10px;
+  font-size: 10px !important;
+  margin-bottom: 5px;
   margin-top: 5px;
-  padding: 10px 10px;
+  padding: 5px 5px;
   text-align: center;  
 }
 .logo > span {
@@ -450,7 +450,7 @@ img{border: none;}
   padding: 0 12px;
   position: absolute;
   text-align: center;
-  top: -11px;
+  top: -21px;
   width: auto;
 }
 .dirc_up {

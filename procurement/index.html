@@ -47,23 +47,22 @@
                                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="icon-bar">&nbsp;</span>
-                                        <span class="icon-bar">&nbsp;</span>
                                     </button>
                                     <!-- For Text Logo -->
                                     <!--<a class="navbar-brand logo" href="#"><span>App</span>Station</a>-->
                                     <!-- For Img Logo -->
-                                    <a class="navbar-brand logo" href="#"><img src="../images/Bokoni_Platinum Mines_Logo_White.png" height="70" alt="logo"></a>
+                                    <a class="navbar-brand logo" href="#"><img src="../images/Bokoni_Platinum Mines_Logo_White.png" style="max-height:100px" alt="logo"></a>
                                 </div>
-                                <div id="navbar" class="navbar-brand">
-                                        <ul class="nav navbar-nav navbar-right custom_nav mobnav" id="top-menu1">
-                                            <li><a href="../index.html#homeSection">HOME</a></li>
-                                            <li><a href="../index.html#aboutSection">ABOUT US </a></li>
-                                            <li><a href="../index.html#socialSection">SOCIAL RESPONSIBILITY</a></li>
-                                            <li><a href="../index.html#newsSection">NEWS</a></li>
-                                            <li><a href="../index.html#careerSection">CAREERS</a></li>
-                                            <li class="active"><a href="../index.html#supplierSection">SUPPLIERS</a></li>
-                                            <li><a href="../index.html#contactSection">CONTACT</a></li>
-                                        </ul>
+                                <div id="navbar" class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav navbar-right custom_nav mobnav" id="top-menu1">
+                                        <li><a href="../index.html#homeSection">HOME</a></li>
+                                        <li><a href="../index.html#aboutSection">ABOUT US </a></li>
+                                        <li><a href="../index.html#socialSection">OUR RESPONSIBILITY</a></li>
+                                        <li><a href="../index.html#newsSection">NEWS</a></li>
+                                        <li><a href="../index.html#careerSection">CAREERS</a></li>
+                                        <li class="active"><a href="../index.html#supplierSection">SUPPLIERS</a></li>
+                                        <li><a href="../index.html#contactSection">CONTACT</a></li>
+                                    </ul>
                                 </div><!--/.nav-collapse -->
                             </div>
                         </div>
@@ -97,9 +96,10 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-7 col-md-7">
+                <div class="col-lg-6 col-md-6">
                     <div class="featprodcs_content wow fadeInRight">
                         <p>&nbsp;</p>
+                        <h2>Current opportunities</h2>
                         <p>Welcome to the heart of platinum mining excellence! At Bokoni Platinum Mines, we are forging the future of platinum mining, and we invite suppliers from across the industry to join us on this extraordinary journey. As a leading platinum mine, we understand the value of strong partnerships. By registering on our portal, you gain access to a world of opportunities to collaborate and grow with us. Whether you provide equipment, services, or expertise, your role is pivotal in shaping the platinum industry's future. Join us today, and let us unlock new horizons together.</p>
 
 
@@ -108,15 +108,59 @@
                 </div>
 
 
-                <div class="col-lg-5 col-md-5">
-                    <div class="features_ara">
-                        <div class="features_responsive">
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact_right wow fadeInRight">
+                        <h2>Register on our Supplier Database</h2>
+                        <p>Welcome to the heart of platinum mining excellence! At Bokoni Platinum Mines, we are forging the future of platinum mining, and we invite suppliers from across the industry to join us on this extraordinary journey. As a leading platinum mine, we understand the value of strong partnerships. By registering on our portal, you gain access to a world of opportunities to collaborate and grow with us. Whether you provide equipment, services, or expertise, your role is pivotal in shaping the platinum industry's future. Join us today, and let us unlock new horizons together.</p>
+
+                        <div id="form-messages"></div>
+
+                        <form class="footer_form" id="frmSupplierRegistration" name="frmSupplierRegistration" method="post">
                             <div class="row">
-                                <div class="wow fadeInLeft">
-                                    <img class="img-responsive" src="../images/4.jpg" style="max-height: 250px;" alt="Happy people working at Bokoni Platinum Mines" />
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-grooup">
+                                        <input id="txtCompanyName" name="txtCompanyName" type="text" class="form-control" placeholder="Name of the company" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-grooup">
+                                        <input id="txtContactPerson" name="txtContactPerson" type="text" class="form-control" placeholder="Contact person" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-grooup">
+                                        <input id="txtContactNumber" name="txtContactNumber" type="text" class="form-control" placeholder="Contact number" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <input id="txtContactEmail" name="txtContactEmail" type="email" class="form-control" placeholder="Email (Required)" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-grooup">
+                                        <input id="txtMembershipNumber" name="txtMembershipNumber" type="text" class="form-control" placeholder="CIPC number" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-grooup">
+                                        <input id="fileMembershipAttachment" name="fileMembershipAttachment" type="file" class="form-control" placeholder="Proof of CIPC registration" required>
+                                        <label id="file-input-label" for="fileMembershipAttachment" style="font-weight:normal;color:#808080;">
+                                            <i>Attach your CIPC registration here</i>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <textarea id="txtOffering" name="txtOffering" class="form-control" cols="30" rows="5" placeholder="Describe your offerings"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <input class="contact_sendbtn" type="submit" value="Register as a supplier">
+                        </form>
 
                     </div>
                 </div>
