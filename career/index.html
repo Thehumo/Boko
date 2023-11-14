@@ -174,6 +174,20 @@
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
+                                        <div>Do you have the required experience as per the job advert?</div>
+                                        <input type="radio" id="YesToExperience" name="radRelevantExperience" value="Yes" class="form-control"><label for="YesToExperience">YES</label>
+                                        <input type="radio" id="NoToExperience" name="radRelevantExperience" value="No" class="form-control"><label for="NoToExperience">NO</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <div>Do you have the required qualification(s) as per the job advert?</div>
+                                        <input type="radio" id="YesToQualifications" name="radRelevantQualifications" value="Yes" class="form-control"><label for="YesToQualifications">YES</label>
+                                        <input type="radio" id="NoToQualifications" name="radRelevantQualifications" value="No" class="form-control"><label for="NoToQualifications">NO</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
                                         <textarea id="txtResume" name="txtResume" class="form-control" cols="30" rows="5" placeholder="Summary of your resume"></textarea>
                                     </div>
                                 </div>
@@ -237,26 +251,19 @@
         // THIS IS WHERE OPPORTUNITIES ARE LISTED AND MAINTAINED --------------------------------------------------------------------------
         var opportunities = [
             {
-                title: "Accountant (C5)",
-                pdfLink: "03112023 Advertisement Accountant C5.pdf",
-                description: "To manage, co-ordinate and maintain the accuracy, completeness, timeliness and validity of Accounts Payable/Receivable/Cash Book function.",
-                expiryDate: "2023-11-10"
+                title: "Accounts (Creditors) Administrator (B5)",
+                pdfLink: "10112023 Advertisement Accounts (Creditors) Administrator B5",
+                description: "Ensure that creditors and other suppliers are paid on time, a discount is taken where applicable",
+                expiryDate: "2023-11-16"
             },
             {
-                title: "Control Room Coordinator (C2)",
-                pdfLink: "03112023 Advertisement Coordinator Control Room C2.pdf",
-                description: "To ensure and maintain a safe, healthy, and productive work environment",
-                expiryDate: "2023-11-10"
+                title: "HRD Administrator (B5)",
+                pdfLink: "13112023 Advertisement HRD Administrator B5",
+                description: "The HRD Administrator provide support to the HRD Officer (Systems) and the entire Human Resource Development functions by ensuring efficient HRD Administration processes. This role will assist with clerical and administrative duties at the Bokoni Platinum Mines HRD Department.",
+                expiryDate: "2023-11-17"
             },
-            {
-                title: "Reliability Engineer (DL)",
-                pdfLink: "03112023 Advertisement Reliability Engineer DL.pdf",
-                description: "A reliability engineer is a professional who ensures that the equipment and processes of an organization operate at optimal levels and meet the needs of the customers. The main goal of a reliability engineer is to increase the uptime, reliability, and efficiency of the systems and equipment by analysing data, identifying problems, and developing solutions.",
-                expiryDate: "2023-11-10"
-            },
-            // Add more opportunities here
             /*
-
+            entry template for future use
             {
               title: "",
               pdfLink: "",
@@ -267,86 +274,108 @@
 
             */
         ];
-        // ----- END OF THE OPPORTUNITY LIST ----------------------------------------------------------------------------------------------
-
-        var select = document.createElement("select");
-        select.id = "txtPositionAppliedFor";
-        select.className = "form-control";
-        select.style.lineHeight = "2";
-
-        var defaultOption = document.createElement("option");
-        defaultOption.text = "Select the position to apply for";
-        defaultOption.disabled = true; // Make it non-selectable
-        defaultOption.selected = true; // Make it the default selected option
-        select.appendChild(defaultOption);
-
-        opportunities.forEach(function (opportunity) {
-            // Parse the opportunity's expiry date
-            var expiryDate = new Date(opportunity.expiryDate);
-
-
-            // Check if the expiry date is in the future
-            if (expiryDate > currentDate) {
-                var option = document.createElement("option");
-                option.value = opportunity.title;
-                option.text = opportunity.title;
-                select.appendChild(option);
-            }
-        });
-
-        // Append the select element to your HTML
-        document.querySelector("#positionSelector").appendChild(select);
-
-
-
 
         var opportunitiesContainer = document.querySelector("#opportunitiesContainer");
 
-        var opportunityTable = document.createElement("table");
-        opportunityTable.className = "opportunity-table"; // Add class name for styling
+        // Check if there are opportunities
+        if (opportunities.some(opportunity => new Date(opportunity.expiryDate) > currentDate)) {
+            // Opportunities are present
 
-        opportunities.forEach(function (opportunity) {
-            // Parse the opportunity's expiry date
-            var expiryDate = new Date(opportunity.expiryDate);
+            // Code for creating the dropdown select
+            var select = document.createElement("select");
 
-            // Check if the expiry date is in the future
-            if (expiryDate > currentDate) {
-                // Create a table for each opportunity
+            select.id = "txtPositionAppliedFor";
+            select.className = "form-control";
+            select.style.lineHeight = "2";
 
+            var defaultOption = document.createElement("option");
+            defaultOption.text = "Select the position to apply for";
+            defaultOption.disabled = true; // Make it non-selectable
+            defaultOption.selected = true; // Make it the default selected option
+            select.appendChild(defaultOption);
 
-                // Create a table row for the opportunity
-                var row = opportunityTable.insertRow(0);
+            opportunities.forEach(function (opportunity) {
+                // Parse the opportunity's expiry date
+                var expiryDate = new Date(opportunity.expiryDate);
 
-                // Create a table cell for the icon
-                var iconCell = row.insertCell(0);
-                iconCell.className = "opportunity-icon"; // Add class name for styling
-                var iconImage = document.createElement("img");
-                iconImage.src = "../images/pdf-icon.png";
-                iconImage.border = 0;
-                iconImage.width = 32;
-                iconCell.appendChild(iconImage);
+                // Check if the expiry date is in the future
+                if (expiryDate > currentDate) {
+                    var option = document.createElement("option");
+                    option.value = opportunity.title;
+                    option.text = opportunity.title;
+                    select.appendChild(option);
+                }
+            });
 
-                // Create a table cell for the title with a hyperlink
-                var titleCell = row.insertCell(1);
-                titleCell.className = "opportunity-title"; // Add class name for styling
-                var titleLink = document.createElement("a");
-                titleLink.href = opportunity.pdfLink;
-                titleLink.textContent = opportunity.title;
-                titleLink.target = "_blank";
-                titleCell.appendChild(titleLink);
+            // Append the select element to your HTML
+            document.querySelector("#positionSelector").appendChild(select);
 
-                // Create a table cell for the expiry date
-                var dateCell = row.insertCell(2);
-                dateCell.className = "opportunity-date"; // Add class name for styling
-                dateCell.textContent = opportunity.expiryDate;
+            // Code for creating the opportunities table
+            
 
-            }
+            var opportunityTable = document.createElement("table");
+            opportunityTable.className = "opportunity-table"; // Add class name for styling
+
+            opportunities.forEach(function (opportunity) {
+                // Parse the opportunity's expiry date
+                var expiryDate = new Date(opportunity.expiryDate);
+
+                // Check if the expiry date is in the future
+                if (expiryDate > currentDate) {
+                    // Create a table for each opportunity
+                    // Create a table row for the opportunity
+                    var row = opportunityTable.insertRow(0);
+
+                    // Create a table cell for the icon
+                    var iconCell = row.insertCell(0);
+                    iconCell.className = "opportunity-icon"; // Add class name for styling
+                    var iconImage = document.createElement("img");
+                    iconImage.src = "../images/pdf-icon.png";
+                    iconImage.border = 0;
+                    iconImage.width = 32;
+                    iconCell.appendChild(iconImage);
+
+                    // Create a table cell for the title with a hyperlink
+                    var titleCell = row.insertCell(1);
+                    titleCell.className = "opportunity-title"; // Add class name for styling
+                    var titleLink = document.createElement("a");
+                    titleLink.href = opportunity.pdfLink;
+                    titleLink.textContent = opportunity.title;
+                    titleLink.target = "_blank";
+                    titleCell.appendChild(titleLink);
+
+                    // Create a table cell for the expiry date
+                    var dateCell = row.insertCell(2);
+                    dateCell.className = "opportunity-date"; // Add class name for styling
+                    dateCell.textContent = opportunity.expiryDate;
+                }
+            });
 
             // Append the opportunity table to the container
+            opportunitiesContainer.appendChild(opportunityTable);
+        } else {
+            // No opportunities at present. Display a message
+            var noOpportunitiesDiv = document.createElement("div");
+            noOpportunitiesDiv.className = "noopportunity wow fadeInUp";
 
+            var noOpportunitiesInfoDiv = document.createElement("div");
+            noOpportunitiesInfoDiv.className = "col-lg-10 col-md-10";
 
-        });
-        opportunitiesContainer.appendChild(opportunityTable);
+            var noOpportunitiesTitle = document.createElement("h4");
+            noOpportunitiesTitle.textContent = "No opportunities available present.";
+
+            var noOpportunitiesMessage = document.createElement("div");
+            noOpportunitiesMessage.textContent = "Thank you for your interest in joining our dynamic team. At the moment, there are no open opportunities, but we're committed to the growth of our mining family. Keep your tools ready, and check back soon. Our commitment to expansion and innovation means new opportunities are always on the horizon. Your skills could be the key to unlocking our next chapter. We appreciate your patience and dedication to your craft. Remember, the mining journey is an ever-evolving one, and we look forward to having you with us in the future. Stay tuned for exciting developments!";
+
+            // Construct the elements hierarchy for the message
+            noOpportunitiesInfoDiv.appendChild(noOpportunitiesTitle);
+            noOpportunitiesInfoDiv.appendChild(noOpportunitiesMessage);
+            noOpportunitiesDiv.appendChild(noOpportunitiesInfoDiv);
+
+            // Append the message to the container
+            opportunitiesContainer.appendChild(noOpportunitiesDiv);
+        }
+
 
     </script>
 
