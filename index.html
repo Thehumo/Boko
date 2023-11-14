@@ -638,14 +638,37 @@
       <script src="scripts/wow.min.js"></script>
 
       <!-- Custom js -->
-      <script>
-          (document.getElementById("contactsub").onclick = async () => {
-              const { text } = await (await fetch(`/api/HttpBokoContact`)).text();
-              document.getElementById("footerpara").textContent = text
+    
+<script>
+        function triggerFunction() {
+            const param1 = document.getElementById('param1').value;
+            const param2 = document.getElementById('param2').value;
+            // Retrieve other parameters as needed
 
+            const url = 'https://<your-function-name>.azurewebsites.net/api/<your-function-endpoint>';
 
-          });
-      </script>
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    param1: param1,
+                    param2: param2,
+                    // Include other parameters in the body
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Function response:', data);
+                // Handle the response as needed
+            })
+            .catch(error => {
+                console.error('Error triggering function:', error);
+            });
+        }
+    </script>
+     
       <script type="text/javascript" src="scripts/custom.js"></script>
 
   </body>
