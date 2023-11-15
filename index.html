@@ -590,7 +590,7 @@
                                                   </div>
                                               </div>
                                           </div>
-                                          <input class="contact_sendbtn" id="contactsub" type="submit" value="Send">
+                                          <input class="contact_sendbtn" id="contactsub" onclick="triggerFunction()" type="submit" value="Send">
                                       </form>
                                   </div>
                               </div>
@@ -641,11 +641,11 @@
     
 <script>
         function triggerFunction() {
-            const param1 = document.getElementById('param1').value;
-            const param2 = document.getElementById('param2').value;
+            const param1 =""pam1;<!-- document.getElementById('param1').value;
+            const param2 = "";<!--//document.getElementById('param2').value;
             // Retrieve other parameters as needed
 
-            const url = 'https://<your-function-name>.azurewebsites.net/api/<your-function-endpoint>';
+            const url = 'https://httpbokocontact.azurewebsites.net/api/ContactpageAZF';
 
             fetch(url, {
                 method: 'POST',
