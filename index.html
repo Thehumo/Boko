@@ -667,6 +667,11 @@
             Contact_FullName = document.getElementById("txtFullName").value;
             Contact_Email = document.getElementById("txtMail").value;
             Contact_Message = document.getElementById("txtMessage").value;
+
+            //clear the form fields
+            document.getElementById("txtFullName").value = "";
+            document.getElementById("txtMail").value = "";
+            document.getElementById("txtMessage").value = "";
           } else if(source == "Career")
           {
 // get career fields information
@@ -675,6 +680,13 @@
             Career_DOB = document.getElementById("txtDateOfBirth").value;
             Career_Email = document.getElementById("txtContactEmail").value;
             Career_PositionApplied = document.getElementById("txtPositionAppliedFor").value;
+
+            //Clear form fields
+           document.getElementById("txtName").value = "";
+            document.getElementById("txtContactNumber").value = "";
+            document.getElementById("txtDateOfBirth").value = "";
+            document.getElementById("txtContactEmail").value = "";
+            document.getElementById("txtPositionAppliedFor").value = "";
             
           } else if(source == "Supplier")
           {
@@ -685,7 +697,14 @@
             Supplier_ContactEmail = document.getElementById("txtContactEmail").value;
             Supplier_MembershipNumber = document.getElementById("txtPositionAppliedFor").value;
             Supplier_Offering = document.getElementById("txtDateOfBirth").value;
-            
+
+            //Clear form fields
+            document.getElementById("txtName").value = "";
+            document.getElementById("txtContactNumber").value = "";
+            document.getElementById("txtDateOfBirth").value = "";
+            document.getElementById("txtContactEmail").value = "";
+            document.getElementById("txtPositionAppliedFor").value = "";
+            document.getElementById("txtDateOfBirth").value = "";
             
           }
 
