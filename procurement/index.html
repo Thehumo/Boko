@@ -258,36 +258,36 @@
                 Title: "Demonstration Tender Item One",
                 PDFLink: "Temporary.pdf",
                 Description: "ARM-BOK-ABC23/1233 Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                ExpiryDate: "2023-11-31",
-                PublishedDate: "2023-11-01"
+                ExpiryDate: "2023-10-30",
+                PublishedDate: "2023-11-12"
             },
             {
                 Title: "Demonstration Tender Item Two",
                 PDFLink: "Temporary.pdf",
                 Description: "ARM-BOK-ABC23/1233 Aenean a fringilla ligula. Donec tincidunt metus nisl, sit amet placerat ex molestie nec. ",
-                ExpiryDate: "2023-11-31",
+                ExpiryDate: "2023-10-30",
                 PublishedDate: "2023-11-01"
             },
             {
                 Title: "Demonstration Tender Item Three",
                 PDFLink: "Temporary.pdf",
                 Description: "ARM-BOK-ABC23/1233 Nam ornare leo sed sapien laoreet, non venenatis neque maximus. ",
-                ExpiryDate: "2023-11-31",
+                ExpiryDate: "2023-10-30",
                 PublishedDate: "2023-11-01"
             },
             {
                 Title: "Demonstration Tender Item Four",
                 PDFLink: "Temporary.pdf",
                 Description: "ARM-BOK-ABC23/1233 Fusce blandit sodales viverra. Integer nec efficitur libero, nec scelerisque massa. In tincidunt sit amet arcu vitae efficitur.  ",
-                ExpiryDate: "2023-11-31",
+                ExpiryDate: "2023-10-30",
                 PublishedDate: "2023-11-01"
             },
             {
                 Title: "Demonstration Tender Item Five",
                 PDFLink: "Temporary.pdf",
                 Description: "ARM-BOK-ABC23/1233 Praesent dolor erat, dapibus eu quam vitae, convallis finibus ante. ",
-                ExpiryDate: "2023-11-31",
-                PublishedDate: "2023-11-01"
+                ExpiryDate: "2023-10-30",
+                PublishedDate: "2023-10-01"
             },
             // Add more opportunities here
             /*
@@ -312,61 +312,89 @@
         var opportunitiesContainer = document.querySelector("#opportunitiesContainer");
 
 
-        supplyChainOpportunities.forEach(function (opportunity) {
-            // Parse the opportunity's expiry date
-            var expiryDate = new Date(opportunity.ExpiryDate);
+        if (supplyChainOpportunities.some(opportunity => new Date(opportunity.ExpiryDate) > currentDate)) {
+            supplyChainOpportunities.forEach(function (opportunity) {
+                // Parse the opportunity's expiry date
+                var expiryDate = new Date(opportunity.ExpiryDate);
 
-            // Check if the expiry date is in the future
-            if (expiryDate > currentDate) {
-                // Create a div for the procurement opportunity
-                var procurementOpportunityDiv = document.createElement("div");
-                procurementOpportunityDiv.className = "procurementOpportunity row wow fadeInUp";
+                // Check if the expiry date is in the future
+                if (expiryDate > currentDate) {
+                    
 
-                // Create divs for the two columns
-                var iconColumnDiv = document.createElement("div");
-                iconColumnDiv.className = "col-lg-2 col-md-2";
 
-                var infoColumnDiv = document.createElement("div");
-                infoColumnDiv.className = "procurementInfo col-lg-10 col-md-10";
+                    // Create a div for the procurement opportunity
+                    var procurementOpportunityDiv = document.createElement("div");
+                    procurementOpportunityDiv.className = "procurementOpportunity row wow fadeInUp";
 
-                // Create an anchor for the PDF link and an image element
-                var pdfLink = document.createElement("a");
-                pdfLink.href = opportunity.PDFLink;
-                pdfLink.target = "_blank";
+                    // Create divs for the two columns
+                    var iconColumnDiv = document.createElement("div");
+                    iconColumnDiv.className = "col-lg-2 col-md-2";
 
-                var pdfImage = document.createElement("img");
-                pdfImage.className = "img-responsive";
-                pdfImage.src = "../images/pdf-icon.png";
-                pdfImage.alt = "img";
+                    var infoColumnDiv = document.createElement("div");
+                    infoColumnDiv.className = "procurementInfo col-lg-10 col-md-10";
 
-                // Append the image to the anchor, and the anchor to the icon column
-                pdfLink.appendChild(pdfImage);
-                iconColumnDiv.appendChild(pdfLink);
+                    // Create an anchor for the PDF link and an image element
+                    var pdfLink = document.createElement("a");
+                    pdfLink.href = opportunity.PDFLink;
+                    pdfLink.target = "_blank";
 
-                // Create divs for the procurement information
-                var titleDiv = document.createElement("h4");
-                titleDiv.textContent = opportunity.Title;
+                    var pdfImage = document.createElement("img");
+                    pdfImage.className = "img-responsive";
+                    pdfImage.src = "../images/pdf-icon.png";
+                    pdfImage.alt = "img";
 
-                var dateInfoDiv = document.createElement("div");
-                dateInfoDiv.title = "PUBLISHED: " + opportunity.PublishedDate;
-                dateInfoDiv.textContent = "EXP: " + opportunity.ExpiryDate;
+                    // Append the image to the anchor, and the anchor to the icon column
+                    pdfLink.appendChild(pdfImage);
+                    iconColumnDiv.appendChild(pdfLink);
 
-                var descriptionDiv = document.createElement("div");
-                descriptionDiv.textContent = opportunity.Description;
+                    // Create divs for the procurement information
+                    var titleDiv = document.createElement("h4");
+                    titleDiv.textContent = opportunity.Title;
 
-                // Append the information divs to the info column
-                infoColumnDiv.appendChild(titleDiv);
-                infoColumnDiv.appendChild(dateInfoDiv);
-                infoColumnDiv.appendChild(descriptionDiv);
+                    alert(opportunity.Title + ' ------ '+ expiryDate + ' - ' + currentDate)
 
-                // Append the columns to the procurement opportunity div
-                procurementOpportunityDiv.appendChild(iconColumnDiv);
-                procurementOpportunityDiv.appendChild(infoColumnDiv);
+                    var dateInfoDiv = document.createElement("div");
+                    dateInfoDiv.title = "PUBLISHED: " + opportunity.PublishedDate;
+                    dateInfoDiv.textContent = "EXP: " + opportunity.ExpiryDate;
 
-                // Append the procurement opportunity div to the container
-                opportunitiesContainer.appendChild(procurementOpportunityDiv);
-            }
-        });
+                    var descriptionDiv = document.createElement("div");
+                    descriptionDiv.textContent = opportunity.Description;
+
+                    // Append the information divs to the info column
+                    infoColumnDiv.appendChild(titleDiv);
+                    infoColumnDiv.appendChild(dateInfoDiv);
+                    infoColumnDiv.appendChild(descriptionDiv);
+
+                    // Append the columns to the procurement opportunity div
+                    procurementOpportunityDiv.appendChild(iconColumnDiv);
+                    procurementOpportunityDiv.appendChild(infoColumnDiv);
+
+                    // Append the procurement opportunity div to the container
+                    opportunitiesContainer.appendChild(procurementOpportunityDiv);
+                }
+            });
+        } else {
+            // No Supply Chain Opportunities at present. Display a message
+            var noOpportunitiesDiv = document.createElement("div");
+            noOpportunitiesDiv.className = "procurementOpportunity wow fadeInUp";
+
+            var noOpportunitiesInfoDiv = document.createElement("div");
+            noOpportunitiesInfoDiv.className = "procurementInfo col-lg-10 col-md-10";
+
+            var noOpportunitiesMessage = document.createElement("p");
+            noOpportunitiesMessage.textContent = "No Supply Chain Opportunities at present. Check back soon for more opportunities in our dynamic supply chain.";
+
+            // Construct the elements hierarchy for the message
+            noOpportunitiesInfoDiv.appendChild(noOpportunitiesMessage);
+            noOpportunitiesDiv.appendChild(noOpportunitiesInfoDiv);
+
+            // Append the message to the container
+            opportunitiesContainer.appendChild(noOpportunitiesDiv);
+        }
+
+
+
+
 
 
 function triggerFunction(source) {

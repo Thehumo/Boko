@@ -145,6 +145,7 @@
                 <div class="col-lg-5">
 
                     <div class="contact_right wow fadeInLeft">
+                        <div id="form-messages"></div>
                         <form class="footer_form" id="frmJobApplication" name="frmJobApplication" method="post">
                             <h3>Apply here</h3>
                             <div class="row">
@@ -193,9 +194,9 @@
                                             </div>
                                         </div>
 
-                                        
+
                                     </div>
-                                    </div>
+                                </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
                                         <div>Do you have the required qualification(s) as per the job advert?</div>
@@ -216,8 +217,8 @@
                                                 <label for="NoToQualifications" class="form-control">NO</label>
                                             </div>
                                         </div>
-                                        
-                                        
+
+
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
@@ -294,7 +295,7 @@
                 title: "HRD Administrator (B5)",
                 pdfLink: "13112023 Advertisement HRD Administrator B5.pdf",
                 description: "The HRD Administrator provide support to the HRD Officer (Systems) and the entire Human Resource Development functions by ensuring efficient HRD Administration processes. This role will assist with clerical and administrative duties at the Bokoni Platinum Mines HRD Department.",
-                expiryDate: "2023-11-17"
+                expiryDate: "2023-11-16"
             },
             /*
             entry template for future use
@@ -398,8 +399,8 @@
             var noOpportunitiesTitle = document.createElement("h4");
             noOpportunitiesTitle.textContent = "No opportunities available present.";
 
-            var noOpportunitiesMessage = document.createElement("div");
-            noOpportunitiesMessage.textContent = "Thank you for your interest in joining our dynamic team. At the moment, there are no open opportunities, but we're committed to the growth of our mining family. Keep your tools ready, and check back soon. Our commitment to expansion and innovation means new opportunities are always on the horizon. Your skills could be the key to unlocking our next chapter. We appreciate your patience and dedication to your craft. Remember, the mining journey is an ever-evolving one, and we look forward to having you with us in the future. Stay tuned for exciting developments!";
+            var noOpportunitiesMessage = document.createElement("p");
+            noOpportunitiesMessage.textContent = "Thank you for expressing interest in joining our dynamic team. While there are currently no available positions, we remain dedicated to fostering growth within our mining family. Keep your tools ready and check back regularly for updates. Our commitment to expansion and innovation ensures that new opportunities continuously emerge on the horizon. Your skills could be key to unlocking our next chapter. Remember, the mining journey is an ever - evolving adventure.Stay connected for thrilling developments that lie ahead!";
 
             // Construct the elements hierarchy for the message
             noOpportunitiesInfoDiv.appendChild(noOpportunitiesTitle);

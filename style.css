@@ -402,7 +402,9 @@ img{border: none;}
 .noopportunity {
 	background-color: #808080;
 }
-
+.noopportunity p {
+	line-height:32px;
+}
 .opportunity-table {
 	width: 80%;
 }
@@ -459,6 +461,9 @@ img{border: none;}
 .procurementInfo div {
 	padding: 4px;
 }
+	.procurementInfo div p {
+		line-height: 32px;
+	}
 .img-responsive {
 	display: inline-block;
 	height: auto;
