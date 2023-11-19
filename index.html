@@ -689,9 +689,8 @@
             Contact_Message = document.getElementById("txtMessage").value;
 
             //clear the form fields
-            document.getElementById("txtFullName").value = "";
-            document.getElementById("txtMail").value = "";
-            document.getElementById("txtMessage").value = "";
+            document.getElementById("frmContactUs").reset()
+           
           } else if(source == "Career")
           {
 // get career fields information
@@ -711,20 +710,17 @@
           } else if(source == "Supplier")
           {
 // get supplier fields information
-            Supplier_CompanyName = document.getElementById("txtName").value;
-            Supplier_ContactPerson = document.getElementById("txtContactNumber").value;
-            Supplier_ContactNumber = document.getElementById("txtDateOfBirth").value;
+            Supplier_CompanyName = document.getElementById("txtCompanyName").value;
+            Supplier_ContactPerson = document.getElementById("txtContactPerson").value;
+            Supplier_ContactNumber = document.getElementById("txtContactNumber").value;
             Supplier_ContactEmail = document.getElementById("txtContactEmail").value;
-            Supplier_MembershipNumber = document.getElementById("txtPositionAppliedFor").value;
-            Supplier_Offering = document.getElementById("txtDateOfBirth").value;
+            Supplier_MembershipNumber = document.getElementById("txtSupplyCategory").value;
+            Supplier_Offering = document.getElementById("txtOffering").value;
 
             //Clear form fields
-            document.getElementById("txtName").value = "";
-            document.getElementById("txtContactNumber").value = "";
-            document.getElementById("txtDateOfBirth").value = "";
-            document.getElementById("txtContactEmail").value = "";
-            document.getElementById("txtPositionAppliedFor").value = "";
-            document.getElementById("txtDateOfBirth").value = "";
+          
+            document.getElementById("frmSupplierRegistration").reset()
+            
             
           }
 
