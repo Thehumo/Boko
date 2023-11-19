@@ -54,14 +54,14 @@
                                     <a class="navbar-brand logo" href="#"><img src="../images/Bokoni_Platinum Mines_Logo_White.png" style="max-height:100px" alt="logo"></a>
                                 </div>
                                 <div id="navbar" class="navbar-collapse collapse">
-                                    <ul class="nav navbar-nav navbar-right custom_nav mobnav" id="top-menu1">
-                                        <li><a href="../index.html#homeSection">HOME</a></li>
-                                        <li><a href="../index.html#aboutSection">ABOUT US </a></li>
-                                        <li><a href="../index.html#socialSection">OUR RESPONSIBILITY</a></li>
-                                        <li><a href="../index.html#newsSection">NEWS</a></li>
-                                        <li><a href="../index.html#careerSection">CAREERS</a></li>
-                                        <li class="active"><a href="../index.html#supplierSection">SUPPLIERS</a></li>
-                                        <li><a href="../index.html#contactSection">CONTACT</a></li>
+                                    <ul class="nav navbar-nav navbar-right custom_nav mobnav">
+                                        <li><a href="../">HOME</a></li>
+                                        <li><a href="#">ABOUT US </a></li>
+                                        <li><a href="../social/">OUR RESPONSIBILITY</a></li>
+                                        <li><a href="../news/">NEWS</a></li>
+                                        <li><a href="../career/">CAREERS</a></li>
+                                        <li class="active"><a href="../procurement/">SUPPLIERS</a></li>
+                                        <li><a href="../contact/">CONTACT</a></li>
                                     </ul>
                                 </div><!--/.nav-collapse -->
                             </div>
@@ -94,47 +94,21 @@
 
 
         <div class="container">
-
             <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-12 col-md-12">
                     <div class="featprodcs_content wow fadeInRight">
-                        <p>&nbsp;</p>
                         <h2>Current opportunities</h2>
                         <p>Welcome to the heart of platinum mining excellence! At Bokoni Platinum Mines, we are forging the future of platinum mining, and we invite suppliers from across the industry to join us on this extraordinary journey. As a leading platinum mine, we understand the value of strong partnerships. By registering on our portal, you gain access to a world of opportunities to collaborate and grow with us. Whether you provide equipment, services, or expertise, your role is pivotal in shaping the platinum industry's future. Join us today, and let us unlock new horizons together.</p>
 
-
-
-                    </div>
-
-                    <div class="featprodcs_content wow fadeInLeft">
-                        <h3 style="text-align:left">&nbsp; Current opportunities</h3>
-
-
-                        <div class="wow fadeInLeft" id="opportunitiesContainer"></div>
-
-                        <!--<div class="procurementOpportunity wow fadeInUp">
-        <div class="col-lg-2 col-md-2">
-            <a href="pdf link goes here" target="_blank"><img class="img-responsive" src="../images/pdf-icon.png" alt="img"></a>
-        </div>
-        <div class="procurementInfo col-lg-10 col-md-10">
-            <div>title goes here</div>
-            <div title="PUBLISHED: published date goes here">EXP: expiry date goes here</div>
-            <div>description goes here</div>
-        </div>
-    </div>-->
-
                     </div>
                 </div>
-
+                </div>
+            <div class="row">
 
 
                 <div class="col-lg-6 col-md-6">
-                    <div class="contact_right wow fadeInRight">
+                    <div class="featprodcs_content wow fadeInRight">
                         <h2>Register on our Supplier Database</h2>
-                        <p>Welcome to the heart of platinum mining excellence! At Bokoni Platinum Mines, we are forging the future of platinum mining, and we invite suppliers from across the industry to join us on this extraordinary journey. As a leading platinum mine, we understand the value of strong partnerships. By registering on our portal, you gain access to a world of opportunities to collaborate and grow with us. Whether you provide equipment, services, or expertise, your role is pivotal in shaping the platinum industry's future. Join us today, and let us unlock new horizons together.</p>
-
-                        <div id="form-messages"></div>
-
                         <form class="footer_form" id="frmSupplierRegistration" name="frmSupplierRegistration" method="post">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12">
@@ -162,6 +136,11 @@
                                         <input id="txtMembershipNumber" name="txtMembershipNumber" type="text" class="form-control" placeholder="CIPC number" required>
                                     </div>
                                 </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <input id="txtSupplyCategory" name="txtContactEmail" type="email" class="form-control" placeholder="Email (Required)" required>
+                                    </div>
+                                </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-grooup">
                                         <input id="fileMembershipAttachment" name="fileMembershipAttachment" type="file" class="form-control" placeholder="Proof of CIPC registration" required>
@@ -178,22 +157,37 @@
                                     </div>
                                 </div>
                             </div>
-                            <input class="contact_sendbtn" type="submit" onclick="triggerFunction('Supplier') value="Register as a supplier" style="width:auto;float:right">
+                            <input class="contact_sendbtn" type="submit" onclick="triggerFunction('Supplier')" value="Register as a supplier" style="width:auto;float:right">
                         </form>
 
                     </div>
                 </div>
 
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
+                <div class="col-lg-6 col-md-6">
+                    <div class="featprodcs_content wow fadeInLeft">
+                        <h3 style="text-align:left">&nbsp; Active opportunities</h3>
+                        <div class="wow fadeInLeft" id="opportunitiesContainer"></div>
 
+                    </div>
+                    <div id="no" class="featprodcs_content wow fadeInLeft">
+                        <h3 style="text-align:left">&nbsp; Active opportunities</h3>
+                        <div class="wow fadeInLeft" id="opportunitiesContainer"></div>
 
-
+                    </div>
                 </div>
-            </div>
 
-            <!--
+
+
+            </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+
+
+
+                    </div>
+                </div>
+
+                <!--
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
 
@@ -208,10 +202,10 @@
 
 
 
-        </div>
+            </div>
 
 
-    </section>
+</section>
 
 
 
@@ -259,28 +253,28 @@
                 PDFLink: "Temporary.pdf",
                 Description: "ARM-BOK-ABC23/1233 Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                 ExpiryDate: "2023-10-30",
-                PublishedDate: "2023-11-12"
+                PublishedDate: "2023-10-12"
             },
             {
                 Title: "Demonstration Tender Item Two",
                 PDFLink: "Temporary.pdf",
                 Description: "ARM-BOK-ABC23/1233 Aenean a fringilla ligula. Donec tincidunt metus nisl, sit amet placerat ex molestie nec. ",
                 ExpiryDate: "2023-10-30",
-                PublishedDate: "2023-11-01"
+                PublishedDate: "2023-10-01"
             },
             {
                 Title: "Demonstration Tender Item Three",
                 PDFLink: "Temporary.pdf",
                 Description: "ARM-BOK-ABC23/1233 Nam ornare leo sed sapien laoreet, non venenatis neque maximus. ",
                 ExpiryDate: "2023-10-30",
-                PublishedDate: "2023-11-01"
+                PublishedDate: "2023-10-01"
             },
             {
                 Title: "Demonstration Tender Item Four",
                 PDFLink: "Temporary.pdf",
                 Description: "ARM-BOK-ABC23/1233 Fusce blandit sodales viverra. Integer nec efficitur libero, nec scelerisque massa. In tincidunt sit amet arcu vitae efficitur.  ",
                 ExpiryDate: "2023-10-30",
-                PublishedDate: "2023-11-01"
+                PublishedDate: "2023-10-01"
             },
             {
                 Title: "Demonstration Tender Item Five",
@@ -351,7 +345,7 @@
                     var titleDiv = document.createElement("h4");
                     titleDiv.textContent = opportunity.Title;
 
-                    alert(opportunity.Title + ' ------ '+ expiryDate + ' - ' + currentDate)
+                    //alert(opportunity.Title + ' ------ '+ expiryDate + ' - ' + currentDate)
 
                     var dateInfoDiv = document.createElement("div");
                     dateInfoDiv.title = "PUBLISHED: " + opportunity.PublishedDate;

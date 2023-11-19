@@ -54,14 +54,14 @@
                                     <a class="navbar-brand logo" href="#"><img src="../images/Bokoni_Platinum Mines_Logo_White.png" style="max-height:100px" alt="logo"></a>
                                 </div>
                                 <div id="navbar" class="navbar-collapse collapse">
-                                    <ul class="nav navbar-nav navbar-right custom_nav mobnav" id="top-menu1">
-                                        <li><a href="../index.html#homeSection">HOME</a></li>
-                                        <li><a href="../index.html#aboutSection">ABOUT US </a></li>
-                                        <li><a href="../index.html#socialSection">OUR RESPONSIBILITY</a></li>
-                                        <li><a href="../index.html#newsSection">NEWS</a></li>
-                                        <li class="active"><a href="../index.html#careerSection">CAREERS</a></li>
-                                        <li><a href="../index.html#supplierSection">SUPPLIERS</a></li>
-                                        <li><a href="../index.html#contactSection">CONTACT</a></li>
+                                    <ul class="nav navbar-nav navbar-right custom_nav mobnav">
+                                        <li class="active"><a href="../">HOME</a></li>
+                                        <li><a href="../about/">ABOUT US </a></li>
+                                        <li><a href="../social/">OUR RESPONSIBILITY</a></li>
+                                        <li><a href="../news/">NEWS</a></li>
+                                        <li class="active"><a href="#">CAREERS</a></li>
+                                        <li><a href="../procurement/">SUPPLIERS</a></li>
+                                        <li><a href="../contact/">CONTACT</a></li>
                                     </ul>
                                 </div><!--/.nav-collapse -->
                             </div>
@@ -110,16 +110,9 @@
 
 
                 <div class="col-lg-5 col-md-5">
-                    <div class="features_ara">
-
-                        <div class="features_responsive">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="single_features_responsive wow fadeInLeft">
-                                        <img class="img-responsive" src="../images/9.jpg" alt="Happy people working at Bokoni Platinum Mines" />
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="features_ara"><div class="personalSpace" style="height:60px;"></div>
+                        <div class="single_features_responsive wow fadeInLeft">
+                            <img class="img-responsive" src="../images/9.jpg" alt="Happy people working at Bokoni Platinum Mines" />
                         </div>
 
                     </div>
@@ -127,24 +120,26 @@
 
             </div>
             <div class="row">
-                <div class="col-lg-7 col-md-7">
+                <div id="opportunitiesContainer" class="col-lg-7 col-md-7">
 
-                    <div class="contact_left wow fadeInLeft">
+                    <div class="featprodcs_content wow fadeInRight">
 
-                        <div class="opportunities_responsive">
-                            <h3 style="text-align:left">&nbsp; Current opportunities</h3>
-                            <div class="col-lg-12 col-md-12" id="opportunitiesContainer">
-
-                            </div>
-
-
-
+                        <h3 id="opportunitiesHead">Current opportunities</h3>
+                        <div id="opportunitiesContainer" class="featprodcs_content wow fadeInLeft">
                         </div>
+
+                        <p id="noopportunitymessage">Thank you for expressing interest in joining our dynamic team. While there are currently no available positions, we remain dedicated to fostering growth within our mining family. Keep your tools ready and check back regularly for updates. Our commitment to expansion and innovation ensures that new opportunities continuously emerge on the horizon. Your skills could be key to unlocking our next chapter. Remember, the mining journey is an ever - evolving adventure.Stay connected for thrilling developments that lie ahead!</p>
                     </div>
+                    
                 </div>
                 <div class="col-lg-5">
 
-                    <div class="contact_right wow fadeInLeft">
+                    <div class="featprodcs_content wow fadeInLeft">
+                        <div id="frmReplacement" class="single_features_responsive">
+                            <img border="0" class="img-responsive" src="../images/8a.jpg" alt="Happy people working at Bokoni Platinum Mines" />
+                        </div>
+                        
+
                         <div id="form-messages"></div>
                         <form class="footer_form" id="frmJobApplication" name="frmJobApplication" method="post">
                             <h3>Apply here</h3>
@@ -232,7 +227,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input class="contact_sendbtn" type="submit" onclick="triggerFunction('Career') value="Apply">
+                            <input class="contact_sendbtn" type="submit" onclick="triggerFunction('Career')" value="Apply">
                         </form>
                     </div>
                 </div>
@@ -347,6 +342,7 @@
 
             // Code for creating the opportunities table
             
+            
 
             var opportunityTable = document.createElement("table");
             opportunityTable.className = "opportunity-table"; // Add class name for styling
@@ -386,29 +382,39 @@
                 }
             });
 
+
+            $("#frmJobApplication").show();
+            $("#frmReplacement").hide();
+            $("#noopportunitymessage").hide();
+            $("#opportunitiesHead").text("Current opportunities");
             // Append the opportunity table to the container
-            opportunitiesContainer.appendChild(opportunityTable);
+            opportunitiesContainer.appendChild(opportunityTable); 
         } else {
             // No opportunities at present. Display a message
+            $("#frmJobApplication").hide();
+            $("#frmReplacement").show();
+            $("#noopportunitymessage").show();
+            $("#opportunitiesHead").text("No opportunities available at present.");
+
             var noOpportunitiesDiv = document.createElement("div");
-            noOpportunitiesDiv.className = "noopportunity wow fadeInUp";
+            noOpportunitiesDiv.className = "wow";
 
             var noOpportunitiesInfoDiv = document.createElement("div");
-            noOpportunitiesInfoDiv.className = "col-lg-10 col-md-10";
+            noOpportunitiesInfoDiv.className = "col-lg-12 col-md-12";
 
-            var noOpportunitiesTitle = document.createElement("h4");
-            noOpportunitiesTitle.textContent = "No opportunities available present.";
+            //var noOpportunitiesTitle = document.createElement("h4");
+            //noOpportunitiesTitle.textContent = "No opportunities available present.";
 
             var noOpportunitiesMessage = document.createElement("p");
             noOpportunitiesMessage.textContent = "Thank you for expressing interest in joining our dynamic team. While there are currently no available positions, we remain dedicated to fostering growth within our mining family. Keep your tools ready and check back regularly for updates. Our commitment to expansion and innovation ensures that new opportunities continuously emerge on the horizon. Your skills could be key to unlocking our next chapter. Remember, the mining journey is an ever - evolving adventure.Stay connected for thrilling developments that lie ahead!";
 
             // Construct the elements hierarchy for the message
-            noOpportunitiesInfoDiv.appendChild(noOpportunitiesTitle);
-            noOpportunitiesInfoDiv.appendChild(noOpportunitiesMessage);
-            noOpportunitiesDiv.appendChild(noOpportunitiesInfoDiv);
+            //noOpportunitiesInfoDiv.appendChild(noOpportunitiesTitle);
+            //noOpportunitiesInfoDiv.appendChild(noOpportunitiesMessage);
+            //noOpportunitiesDiv.appendChild(noOpportunitiesInfoDiv);
 
             // Append the message to the container
-            opportunitiesContainer.appendChild(noOpportunitiesDiv);
+            //opportunitiesContainer.appendChild(noOpportunitiesMessage);
         }
 function triggerFunction(source) {
 
