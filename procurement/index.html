@@ -448,7 +448,7 @@ function triggerFunction(source) {
             Supplier_ContactEmail = document.getElementById("txtContactEmail").value;
             Supplier_MembershipNumber = document.getElementById("txtSupplyCategory").value;
             Supplier_Offering = document.getElementById("txtOffering").value;
-           // Supplier_Memberfile = document.getElementById("fileMembershipAttachment").files[0];
+            Supplier_Memberfile = document.getElementById("fileMembershipAttachment").files[0];
             //Clear form fields
           
             document.getElementById("frmSupplierRegistration").reset()
@@ -478,7 +478,7 @@ FSupplier_ContactNumber:Supplier_ContactNumber,
 FSupplier_ContactEmail:Supplier_ContactEmail,
 FSupplier_MembershipNumber:Supplier_MembershipNumber,
 FSupplier_Offering:Supplier_Offering,
-//FSupplier_File:Supplier_Memberfile                 
+FSupplier_File:Supplier_Memberfile                 
                 }),
             })
             .then(response => response.json())
