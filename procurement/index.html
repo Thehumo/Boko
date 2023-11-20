@@ -408,6 +408,7 @@ function triggerFunction(source) {
             var Supplier_ContactEmail="";
             var Supplier_MembershipNumber="";
             var Supplier_Offering="";
+            var Supplier_Memberfile="";
             // Retrieve other parameters as needed
 
           if(source == "Contact")
@@ -447,7 +448,7 @@ function triggerFunction(source) {
             Supplier_ContactEmail = document.getElementById("txtContactEmail").value;
             Supplier_MembershipNumber = document.getElementById("txtSupplyCategory").value;
             Supplier_Offering = document.getElementById("txtOffering").value;
-
+           // Supplier_Memberfile = document.getElementById("fileMembershipAttachment").files[0];
             //Clear form fields
           
             document.getElementById("frmSupplierRegistration").reset()
@@ -476,7 +477,8 @@ FSupplier_ContactPerson:Supplier_ContactPerson,
 FSupplier_ContactNumber:Supplier_ContactNumber,
 FSupplier_ContactEmail:Supplier_ContactEmail,
 FSupplier_MembershipNumber:Supplier_MembershipNumber,
-FSupplier_Offering:Supplier_Offering
+FSupplier_Offering:Supplier_Offering,
+//FSupplier_File:Supplier_Memberfile                 
                 }),
             })
             .then(response => response.json())
