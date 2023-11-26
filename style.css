@@ -29,21 +29,20 @@ Tags: light, white, App landing page,landing page,single page,Bootstrap,responsi
 /* BASIC TYPOGRAPHY */
 /*--------------------*/
 
-body{
-  overflow-x: hidden !important; 
-  
+body {
+	overflow-x: hidden !important;
+	background-color: #F8F8F8;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: 'Segoe UI', sans-serif;
   color: #000;
 }
- h1 {
-  color: #000;  
-  font-size: 47px;
-  margin-bottom: 15px;
-  margin-top: 0;
-  font-weight: lighter;
-  
+h1 {
+	color: #6d8792;
+	font-size: 47px;
+	margin-bottom: 15px;
+	margin-top: 0;
+	/*font-weight: lighter;*/
 }
 a:hover,a:focus{
   text-decoration: none;
@@ -66,6 +65,26 @@ img{border: none;}
 	bottom: 0;
 	background-color: #6d8792; /* change if the mask should have another color then white */
 	z-index: 99999; /* makes sure it stays on top */
+}
+
+.BokoniCIPrimary {color: #6d8792;}
+.BokoniCISecondary1 {
+	color: #00427A;
+}
+.BokoniCISecondary2 {
+	color: #7C2E3A;
+}
+.BokoniCISecondary3 {
+	color: #585743;
+}
+.BokoniCISecondary4 {
+	color: #D1AA83;
+}
+.BokoniCISecondary5 {
+	color: #E1E0D7;
+}
+.BokoniCISecondary6 {
+	color: #D0C4B1;
 }
 
 #status {
@@ -124,13 +143,13 @@ img{border: none;}
   width: 100%;
 }
 #header {
-  background-image: url("images/IMG_0001.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline;
-  float: left;
-  width: 100%;
+	background-image: url("images/slider/Slider3.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline;
+	float: left;
+	width: 100%;
 }
 .menuarea{
   position: absolute;
@@ -243,7 +262,7 @@ img{border: none;}
 
 .nextpage_btn {
 	border: 1px solid #FFFFFF;
-	background-color: #00427A;
+	background-color: #585743;
 	color: #FFF;
 	display: inline-block;
 	font-size: 13px;
@@ -277,12 +296,12 @@ img{border: none;}
 		-o-transition: all 0.5s;
 		transition: all 0.5s;
 	}
-	.learnmore_btn:hover, .learnmore_btn:focus, .download_btn:hover, .download_btn:focus, {
-		background-color: #585743;
-		color: #FFF;
-		text-decoration: none;
-		outline: none;
-	}
+		.learnmore_btn:hover, .learnmore_btn:focus, .download_btn:hover, .download_btn:focus, {
+			background-color: #00427A;
+			color: #FFF;
+			text-decoration: none;
+			outline: none;
+		}
 	.nextpage_btn:hover, .nextpage_btn:focus {
 		background-color: #C0C0C0;
 		color: #000;
@@ -487,13 +506,14 @@ img{border: none;}
   font-size: 17px;  
 }
 .direction_icon {
-  background: none repeat scroll 0 0 #FFFFFF;
-  left: 35%;
+  background: none repeat scroll 0 0;
+
   padding: 0 12px;
   position: absolute;
   text-align: center;
   top: -31px;
   width: auto;
+  margin: 0 auto;
 }
 .dirc_up {
   border: 1px solid #E3E3E3;
@@ -1353,9 +1373,16 @@ img{border: none;}
 
 @media(max-width:640px){
  .slide_descright h1 {margin-top: 20px;}
+	h1 {
+		text-align: center
+	}
+	h2 {
+		padding-left: 50px
+	}
 }
 
 @media(max-width:480px){
+	h1{text-align:center}
   .direction_icon {left: 32%;}
   .slide_descright h1 {margin-top: 35px;}
   .learnmore_btn {margin: 0 25px 0px;}
