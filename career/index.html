@@ -55,7 +55,7 @@
                                 </div>
                                 <div id="navbar" class="navbar-collapse collapse">
                                     <ul class="nav navbar-nav navbar-right custom_nav mobnav">
-                                        <li class="active"><a href="../">HOME</a></li>
+                                        <li><a href="../">HOME</a></li>
                                         <li><a href="../about/">ABOUT US </a></li>
                                         <li><a href="../social/">OUR RESPONSIBILITY</a></li>
                                         <li><a href="../news/">NEWS</a></li>
@@ -110,7 +110,8 @@
 
 
                 <div class="col-lg-5 col-md-5">
-                    <div class="features_ara"><div class="personalSpace" style="height:60px;"></div>
+                    <div class="features_ara">
+                        <div class="personalSpace" style="height:60px;"></div>
                         <div class="single_features_responsive wow fadeInLeft">
                             <img class="img-responsive" src="../images/9.jpg" alt="Happy people working at Bokoni Platinum Mines" />
                         </div>
@@ -130,7 +131,7 @@
 
                         <p id="noopportunitymessage">Thank you for expressing interest in joining our dynamic team. While there are currently no available positions, we remain dedicated to fostering growth within our mining family. Keep your tools ready and check back regularly for updates. Our commitment to expansion and innovation ensures that new opportunities continuously emerge on the horizon. Your skills could be key to unlocking our next chapter. Remember, the mining journey is an ever - evolving adventure.Stay connected for thrilling developments that lie ahead!</p>
                     </div>
-                    
+
                 </div>
                 <div class="col-lg-5">
 
@@ -138,7 +139,7 @@
                         <div id="frmReplacement" class="single_features_responsive">
                             <img border="0" class="img-responsive" src="../images/8a.jpg" alt="Happy people working at Bokoni Platinum Mines" />
                         </div>
-                        
+
 
                         <div id="form-messages"></div>
                         <form class="footer_form" id="frmJobApplication" name="frmJobApplication" method="post">
@@ -228,12 +229,13 @@
                                 </div>
                             </div>
                             <input class="contact_sendbtn" type="submit" onclick="triggerFunction('Career')" value="Apply">
-                        </form>
+                            </form>
+                        
                     </div>
                 </div>
             </div>
 
-
+            <p>&nbsp;</p>
 
 
         </div>
@@ -254,6 +256,7 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="footer_area">
                         <p>Copyright  © Bokoni Platinum Mines 2023</p>
+                        <p><a href="https://arm.co.za/" target="_blank"><img src="../images/arm-african-rainbow-minerals8786.jpg" height="70" border="0" /></a><br />A subsidiary of Africa Rainbow Minerals Limited (ARM)  </p>
                     </div>
                 </div>
             </div>
@@ -341,8 +344,8 @@
             document.querySelector("#positionSelector").appendChild(select);
 
             // Code for creating the opportunities table
-            
-            
+
+
 
             var opportunityTable = document.createElement("table");
             opportunityTable.className = "opportunity-table"; // Add class name for styling
@@ -388,7 +391,7 @@
             $("#noopportunitymessage").hide();
             $("#opportunitiesHead").text("Current opportunities");
             // Append the opportunity table to the container
-            opportunitiesContainer.appendChild(opportunityTable); 
+            opportunitiesContainer.appendChild(opportunityTable);
         } else {
             // No opportunities at present. Display a message
             $("#frmJobApplication").hide();
@@ -416,71 +419,68 @@
             // Append the message to the container
             //opportunitiesContainer.appendChild(noOpportunitiesMessage);
         }
-function triggerFunction(source) {
+        function triggerFunction(source) {
 
-          // Declare parameters
-            var Career_FullName="";
-            var Career_ContactNumber="";
-            var Career_DOB="";
-            var Career_Email="";
-            var Career_PositionApplied="";
-            var Contact_FullName="";
-            var Contact_Email="";
-            var Contact_Message="";
-            var Supplier_CompanyName="";
-            var Supplier_ContactPerson="";
-            var Supplier_ContactNumber="";
-            var Supplier_ContactEmail="";
-            var Supplier_MembershipNumber="";
-            var Supplier_Offering="";
+            // Declare parameters
+            var Career_FullName = "";
+            var Career_ContactNumber = "";
+            var Career_DOB = "";
+            var Career_Email = "";
+            var Career_PositionApplied = "";
+            var Contact_FullName = "";
+            var Contact_Email = "";
+            var Contact_Message = "";
+            var Supplier_CompanyName = "";
+            var Supplier_ContactPerson = "";
+            var Supplier_ContactNumber = "";
+            var Supplier_ContactEmail = "";
+            var Supplier_MembershipNumber = "";
+            var Supplier_Offering = "";
             // Retrieve other parameters as needed
 
-          if(source == "Contact")
-          {
-// get contact fields information
-            Contact_FullName = document.getElementById("txtFullName").value;
-            Contact_Email = document.getElementById("txtMail").value;
-            Contact_Message = document.getElementById("txtMessage").value;
+            if (source == "Contact") {
+                // get contact fields information
+                Contact_FullName = document.getElementById("txtFullName").value;
+                Contact_Email = document.getElementById("txtMail").value;
+                Contact_Message = document.getElementById("txtMessage").value;
 
-            //clear the form fields
-            document.getElementById("txtFullName").value = "";
-            document.getElementById("txtMail").value = "";
-            document.getElementById("txtMessage").value = "";
-          } else if(source == "Career")
-          {
-// get career fields information
-             Career_FullName = document.getElementById("txtName").value;
-            Career_ContactNumber = document.getElementById("txtContactNumber").value;
-            Career_DOB = document.getElementById("txtDateOfBirth").value;
-            Career_Email = document.getElementById("txtContactEmail").value;
-            Career_PositionApplied = document.getElementById("txtPositionAppliedFor").value;
+                //clear the form fields
+                document.getElementById("txtFullName").value = "";
+                document.getElementById("txtMail").value = "";
+                document.getElementById("txtMessage").value = "";
+            } else if (source == "Career") {
+                // get career fields information
+                Career_FullName = document.getElementById("txtName").value;
+                Career_ContactNumber = document.getElementById("txtContactNumber").value;
+                Career_DOB = document.getElementById("txtDateOfBirth").value;
+                Career_Email = document.getElementById("txtContactEmail").value;
+                Career_PositionApplied = document.getElementById("txtPositionAppliedFor").value;
 
-            //Clear form fields
-           document.getElementById("txtName").value = "";
-            document.getElementById("txtContactNumber").value = "";
-            document.getElementById("txtDateOfBirth").value = "";
-            document.getElementById("txtContactEmail").value = "";
-            document.getElementById("txtPositionAppliedFor").value = "";
-            
-          } else if(source == "Supplier")
-          {
-// get supplier fields information
-            Supplier_CompanyName = document.getElementById("txtName").value;
-            Supplier_ContactPerson = document.getElementById("txtContactNumber").value;
-            Supplier_ContactNumber = document.getElementById("txtDateOfBirth").value;
-            Supplier_ContactEmail = document.getElementById("txtContactEmail").value;
-            Supplier_MembershipNumber = document.getElementById("txtPositionAppliedFor").value;
-            Supplier_Offering = document.getElementById("txtDateOfBirth").value;
+                //Clear form fields
+                document.getElementById("txtName").value = "";
+                document.getElementById("txtContactNumber").value = "";
+                document.getElementById("txtDateOfBirth").value = "";
+                document.getElementById("txtContactEmail").value = "";
+                document.getElementById("txtPositionAppliedFor").value = "";
 
-            //Clear form fields
-            document.getElementById("txtName").value = "";
-            document.getElementById("txtContactNumber").value = "";
-            document.getElementById("txtDateOfBirth").value = "";
-            document.getElementById("txtContactEmail").value = "";
-            document.getElementById("txtPositionAppliedFor").value = "";
-            document.getElementById("txtDateOfBirth").value = "";
-            
-          }
+            } else if (source == "Supplier") {
+                // get supplier fields information
+                Supplier_CompanyName = document.getElementById("txtName").value;
+                Supplier_ContactPerson = document.getElementById("txtContactNumber").value;
+                Supplier_ContactNumber = document.getElementById("txtDateOfBirth").value;
+                Supplier_ContactEmail = document.getElementById("txtContactEmail").value;
+                Supplier_MembershipNumber = document.getElementById("txtPositionAppliedFor").value;
+                Supplier_Offering = document.getElementById("txtDateOfBirth").value;
+
+                //Clear form fields
+                document.getElementById("txtName").value = "";
+                document.getElementById("txtContactNumber").value = "";
+                document.getElementById("txtDateOfBirth").value = "";
+                document.getElementById("txtContactEmail").value = "";
+                document.getElementById("txtPositionAppliedFor").value = "";
+                document.getElementById("txtDateOfBirth").value = "";
+
+            }
 
             const url = 'https://bokoaf.azurewebsites.net/api/ContactpageAZF';
 
@@ -489,32 +489,32 @@ function triggerFunction(source) {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-              body: JSON.stringify({
-DataSource: source,                
-FCareer_FullName: Career_FullName,
-FCareer_ContactNumber: Career_ContactNumber,
-FCareer_DOB:Career_DOB,
-FCareer_Email:Career_Email,
-FCareer_PositionApplied:Career_PositionApplied,
-FContact_FullName:Contact_FullName,
-FContact_Email:Contact_Email,
-FContact_Message:Contact_Message,
-FSupplier_CompanyName:Supplier_CompanyName,
-FSupplier_ContactPerson:Supplier_ContactPerson,
-FSupplier_ContactNumber:Supplier_ContactNumber,
-FSupplier_ContactEmail:Supplier_ContactEmail,
-FSupplier_MembershipNumber:Supplier_MembershipNumber,
-FSupplier_Offering:Supplier_Offering
+                body: JSON.stringify({
+                    DataSource: source,
+                    FCareer_FullName: Career_FullName,
+                    FCareer_ContactNumber: Career_ContactNumber,
+                    FCareer_DOB: Career_DOB,
+                    FCareer_Email: Career_Email,
+                    FCareer_PositionApplied: Career_PositionApplied,
+                    FContact_FullName: Contact_FullName,
+                    FContact_Email: Contact_Email,
+                    FContact_Message: Contact_Message,
+                    FSupplier_CompanyName: Supplier_CompanyName,
+                    FSupplier_ContactPerson: Supplier_ContactPerson,
+                    FSupplier_ContactNumber: Supplier_ContactNumber,
+                    FSupplier_ContactEmail: Supplier_ContactEmail,
+                    FSupplier_MembershipNumber: Supplier_MembershipNumber,
+                    FSupplier_Offering: Supplier_Offering
                 }),
             })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Function response:', data);
-                // Handle the response as needed
-            })
-            .catch(error => {
-                console.error('Error triggering function:', error);
-            });
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Function response:', data);
+                    // Handle the response as needed
+                })
+                .catch(error => {
+                    console.error('Error triggering function:', error);
+                });
         }
 
     </script>

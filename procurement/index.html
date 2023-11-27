@@ -102,7 +102,7 @@
                         <p><b>NOTE:</b> Your registration on the mine’s supplier database does not guarantee or imply any contractual obligations, commitments, or guarantees for the provision of goods or services by Bokoni Platinum Mines. The mine reserves the right to evaluate, select, or engage with suppliers based on its specific business needs, criteria, and processes, regardless of registration on the supplier database.</p>
                     </div>
                 </div>
-                </div>
+            </div>
             <div class="row">
 
 
@@ -161,6 +161,7 @@
                         </form>
 
                     </div>
+                    <p>&nbsp;</p>
                 </div>
 
                 <div class="col-lg-6 col-md-6">
@@ -169,43 +170,39 @@
                         <div class="wow fadeInLeft" id="opportunitiesContainer"></div>
 
                     </div>
-                    <div id="no" class="featprodcs_content wow fadeInLeft">
-                        <h3 style="text-align:left">&nbsp; Active opportunities</h3>
-                        <div class="wow fadeInLeft" id="opportunitiesContainer"></div>
 
-                    </div>
                 </div>
 
 
 
             </div>
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
 
 
 
-                    </div>
                 </div>
+            </div>
 
-                <!--
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
+            <!--
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
 
-                        <div class="features_responsive">
-                            <h2 style="text-align:left">&nbsp; Current opportunities</h2>
-                            <div class="wow fadeInLeft" id="opportunitiesContainer"></div>
+                                <div class="features_responsive">
+                                    <h2 style="text-align:left">&nbsp; Current opportunities</h2>
+                                    <div class="wow fadeInLeft" id="opportunitiesContainer"></div>
+                                </div>
+
+                            </div>
                         </div>
-
-                    </div>
-                </div>
-    -->
+            -->
 
 
 
-            </div>
+        </div>
 
 
-</section>
+    </section>
 
 
 
@@ -220,6 +217,7 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="footer_area">
                         <p>Copyright  © Bokoni Platinum Mines 2023</p>
+                        <p><a href="https://arm.co.za/" target="_blank"><img src="../images/arm-african-rainbow-minerals8786.jpg" height="70" border="0" /></a><br />A subsidiary of Africa Rainbow Minerals Limited (ARM)  </p>
                     </div>
                 </div>
             </div>
@@ -313,7 +311,7 @@
 
                 // Check if the expiry date is in the future
                 if (expiryDate > currentDate) {
-                    
+
 
 
                     // Create a div for the procurement opportunity
@@ -391,69 +389,66 @@
 
 
 
-function triggerFunction(source) {
+        function triggerFunction(source) {
 
-          // Declare parameters
-            var Career_FullName="";
-            var Career_ContactNumber="";
-            var Career_DOB="";
-            var Career_Email="";
-            var Career_PositionApplied="";
-            var Contact_FullName="";
-            var Contact_Email="";
-            var Contact_Message="";
-            var Supplier_CompanyName="";
-            var Supplier_ContactPerson="";
-            var Supplier_ContactNumber="";
-            var Supplier_ContactEmail="";
-            var Supplier_MembershipNumber="";
-            var Supplier_Offering="";
-            var Supplier_Memberfile="";
+            // Declare parameters
+            var Career_FullName = "";
+            var Career_ContactNumber = "";
+            var Career_DOB = "";
+            var Career_Email = "";
+            var Career_PositionApplied = "";
+            var Contact_FullName = "";
+            var Contact_Email = "";
+            var Contact_Message = "";
+            var Supplier_CompanyName = "";
+            var Supplier_ContactPerson = "";
+            var Supplier_ContactNumber = "";
+            var Supplier_ContactEmail = "";
+            var Supplier_MembershipNumber = "";
+            var Supplier_Offering = "";
+            var Supplier_Memberfile = "";
             // Retrieve other parameters as needed
 
-          if(source == "Contact")
-          {
-// get contact fields information
-            Contact_FullName = document.getElementById("txtFullName").value;
-            Contact_Email = document.getElementById("txtMail").value;
-            Contact_Message = document.getElementById("txtMessage").value;
+            if (source == "Contact") {
+                // get contact fields information
+                Contact_FullName = document.getElementById("txtFullName").value;
+                Contact_Email = document.getElementById("txtMail").value;
+                Contact_Message = document.getElementById("txtMessage").value;
 
-            //clear the form fields
-            document.getElementById("txtFullName").value = "";
-            document.getElementById("txtMail").value = "";
-            document.getElementById("txtMessage").value = "";
-          } else if(source == "Career")
-          {
-// get career fields information
-             Career_FullName = document.getElementById("txtName").value;
-            Career_ContactNumber = document.getElementById("txtContactNumber").value;
-            Career_DOB = document.getElementById("txtDateOfBirth").value;
-            Career_Email = document.getElementById("txtContactEmail").value;
-            Career_PositionApplied = document.getElementById("txtPositionAppliedFor").value;
+                //clear the form fields
+                document.getElementById("txtFullName").value = "";
+                document.getElementById("txtMail").value = "";
+                document.getElementById("txtMessage").value = "";
+            } else if (source == "Career") {
+                // get career fields information
+                Career_FullName = document.getElementById("txtName").value;
+                Career_ContactNumber = document.getElementById("txtContactNumber").value;
+                Career_DOB = document.getElementById("txtDateOfBirth").value;
+                Career_Email = document.getElementById("txtContactEmail").value;
+                Career_PositionApplied = document.getElementById("txtPositionAppliedFor").value;
 
-            //Clear form fields
-           document.getElementById("txtName").value = "";
-            document.getElementById("txtContactNumber").value = "";
-            document.getElementById("txtDateOfBirth").value = "";
-            document.getElementById("txtContactEmail").value = "";
-            document.getElementById("txtPositionAppliedFor").value = "";
-            
-          } else if(source == "Supplier")
-          {
-// get supplier fields information
-           
-            Supplier_CompanyName = document.getElementById("txtCompanyName").value;
-            Supplier_ContactPerson = document.getElementById("txtContactPerson").value;
-            Supplier_ContactNumber = document.getElementById("txtContactNumber").value;
-            Supplier_ContactEmail = document.getElementById("txtContactEmail").value;
-            Supplier_MembershipNumber = document.getElementById("txtSupplyCategory").value;
-            Supplier_Offering = document.getElementById("txtOffering").value;
-            Supplier_Memberfile = document.getElementById("fileMembershipAttachment").files[0];
-            //Clear form fields
-          
-            document.getElementById("frmSupplierRegistration").reset()
-            
-          }
+                //Clear form fields
+                document.getElementById("txtName").value = "";
+                document.getElementById("txtContactNumber").value = "";
+                document.getElementById("txtDateOfBirth").value = "";
+                document.getElementById("txtContactEmail").value = "";
+                document.getElementById("txtPositionAppliedFor").value = "";
+
+            } else if (source == "Supplier") {
+                // get supplier fields information
+
+                Supplier_CompanyName = document.getElementById("txtCompanyName").value;
+                Supplier_ContactPerson = document.getElementById("txtContactPerson").value;
+                Supplier_ContactNumber = document.getElementById("txtContactNumber").value;
+                Supplier_ContactEmail = document.getElementById("txtContactEmail").value;
+                Supplier_MembershipNumber = document.getElementById("txtSupplyCategory").value;
+                Supplier_Offering = document.getElementById("txtOffering").value;
+                Supplier_Memberfile = document.getElementById("fileMembershipAttachment").files[0];
+                //Clear form fields
+
+                document.getElementById("frmSupplierRegistration").reset()
+
+            }
 
             const url = 'https://bokoaf.azurewebsites.net/api/ContactpageAZF';
 
@@ -462,33 +457,33 @@ function triggerFunction(source) {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-              body: JSON.stringify({
-DataSource: source,                
-FCareer_FullName: Career_FullName,
-FCareer_ContactNumber: Career_ContactNumber,
-FCareer_DOB:Career_DOB,
-FCareer_Email:Career_Email,
-FCareer_PositionApplied:Career_PositionApplied,
-FContact_FullName:Contact_FullName,
-FContact_Email:Contact_Email,
-FContact_Message:Contact_Message,
-FSupplier_CompanyName:Supplier_CompanyName,
-FSupplier_ContactPerson:Supplier_ContactPerson,
-FSupplier_ContactNumber:Supplier_ContactNumber,
-FSupplier_ContactEmail:Supplier_ContactEmail,
-FSupplier_MembershipNumber:Supplier_MembershipNumber,
-FSupplier_Offering:Supplier_Offering,
-FSupplier_File:Supplier_Memberfile                 
+                body: JSON.stringify({
+                    DataSource: source,
+                    FCareer_FullName: Career_FullName,
+                    FCareer_ContactNumber: Career_ContactNumber,
+                    FCareer_DOB: Career_DOB,
+                    FCareer_Email: Career_Email,
+                    FCareer_PositionApplied: Career_PositionApplied,
+                    FContact_FullName: Contact_FullName,
+                    FContact_Email: Contact_Email,
+                    FContact_Message: Contact_Message,
+                    FSupplier_CompanyName: Supplier_CompanyName,
+                    FSupplier_ContactPerson: Supplier_ContactPerson,
+                    FSupplier_ContactNumber: Supplier_ContactNumber,
+                    FSupplier_ContactEmail: Supplier_ContactEmail,
+                    FSupplier_MembershipNumber: Supplier_MembershipNumber,
+                    FSupplier_Offering: Supplier_Offering,
+                    FSupplier_File: Supplier_Memberfile
                 }),
             })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Function response:', data);
-                // Handle the response as needed
-            })
-            .catch(error => {
-                console.error('Error triggering function:', error);
-            });
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Function response:', data);
+                    // Handle the response as needed
+                })
+                .catch(error => {
+                    console.error('Error triggering function:', error);
+                });
         }
 
     </script>
