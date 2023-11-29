@@ -377,6 +377,15 @@ img{border: none;}
   width: 100%;  
   margin-left:0px;
 }
+.leadershipItem {
+	border: 1px solid #DCDCDC;
+	display: inline;
+	float: left;
+	padding: 10px 10px;
+	width: 100%;
+	margin-left: 0px;
+	background-color:#fff;
+}
 .desktop_icon{
   color: #ffd200;
   display: inline-block;
@@ -408,6 +417,24 @@ img{border: none;}
   font-size: 15px;
   margin-top: 10px;
   text-align: justify;
+}
+
+.leadershipItem img {
+	margin-top: 0px;
+}
+
+.leadershipItem h2 {
+	color: #666666;
+	font-size: 30px;
+	margin-top: 5px;
+}
+
+.leadershipItem p {
+	color: #606060;
+	font-size: 15px;
+	margin-top: 5px;
+	text-align: center;
+	
 }
 
 .features_productarea {
@@ -448,6 +475,14 @@ img{border: none;}
   width: 95%;
   text-align: center;
   margin-top: 7px;
+}
+
+.secondaryPage_content {
+	display: inline;
+	float: left;
+	text-align: left;
+	width: 100%;
+	margin-left: 0px;
 }
 
 .featprodcs_content {
@@ -1286,7 +1321,12 @@ img{border: none;}
 @media(max-width:991px){
   .custom_nav {margin-top: 0;margin-bottom: 10px;}
   .custom_nav li a { font-size: 14px;margin-left: 2px;margin-right: 2px;}
-  .single_features_responsive {margin-bottom: 15px;}
+	.single_features_responsive {
+		margin-bottom: 15px;
+	}
+	.leadershipItem {
+		margin-bottom: 15px;
+	}
   .featprodcs_content {margin-top: 45px;}
   .secondfeatures_prodsarea { margin-top: 75px;}
   .appdownload_area { margin-top: 50px;}
@@ -1334,7 +1374,12 @@ img{border: none;}
 	.nextpage_btn {
 		margin-top: 0px;
 	}
-  .single_features_responsive {margin-bottom: 75px;}
+	.single_features_responsive {
+		margin-bottom: 75px;
+	}
+	.leadershipItem {
+		margin-bottom: 75px;
+	}
   .featprodcs_content {margin-top: 45px;}
   .secondfeatures_prodsarea { margin-top: 75px;}
   .direction_icon { left: 30%;width: 170px;}
@@ -1362,7 +1407,12 @@ img{border: none;}
   .header_btnarea {margin-top: 10px;}
   .featured_video{height: auto;}
   .features_responsive {padding: 0 5%;}
-  .single_features_responsive {margin-left: 0px;}
+	.single_features_responsive {
+		margin-left: 0px;
+	}
+	.leadershipItem {
+		margin-left: 0px;
+	}
   .direction_icon {left: 27%;}
   .navbar-nav.navbar-right:last-child {margin-right: -16px;}
   .slide_descleft {display: none;}/* when mobile device found slide descleft mobile app img will be hidden*/
@@ -1384,6 +1434,33 @@ img{border: none;}
 		margin-top:0px;
 		line-height:1.2;
 	}
+	.leadershipItem {
+		border: 1px solid #DCDCDC;
+		display: block;
+		float:none;
+		padding: 10px 10px;
+		width: 270px;
+		margin: 10px auto;
+		background-color: #fff;
+	}
+
+		.leadershipItem img {
+			margin-top: 0px;
+			width: 100%;
+		}
+
+		.leadershipItem h2 {
+			color: #666666;
+			font-size: 30px;
+			margin-top: 0px;
+		}
+
+		.leadershipItem p {
+			color: #606060;
+			font-size: 15px;
+			margin-top: 0px;
+			text-align: center;
+		}
 }
 
 @media(max-width:480px){
@@ -1401,6 +1478,7 @@ img{border: none;}
 		margin: 20px auto;
 		width:250px;
 	}
+
 }
 
 @media(max-width:360px){
