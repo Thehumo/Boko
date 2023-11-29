@@ -268,7 +268,7 @@ img{border: none;}
 	font-size: 13px;
 	padding: 10px 0;
 	text-align: center;
-	width: 220px;
+	width: 250px;
 	margin-right: 3px;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -276,6 +276,7 @@ img{border: none;}
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
 	border-radius: 12px;
+	
 }
 	.nextpage_btn b {
 		font-size: 17px;
@@ -506,14 +507,14 @@ img{border: none;}
   font-size: 17px;  
 }
 .direction_icon {
-  background: none repeat scroll 0 0;
-
-  padding: 0 12px;
-  position: absolute;
-  text-align: center;
-  top: -31px;
-  width: auto;
-  margin: 0 auto;
+	background: none repeat scroll 0 0;
+	left: 38%;
+	padding: 0 12px;
+	position: absolute;
+	text-align: center;
+	top: -31px;
+	width: auto;
+	margin: 0 auto;
 }
 .dirc_up {
   border: 1px solid #E3E3E3;
@@ -1286,7 +1287,7 @@ img{border: none;}
   .custom_nav {margin-top: 0;margin-bottom: 10px;}
   .custom_nav li a { font-size: 14px;margin-left: 2px;margin-right: 2px;}
   .single_features_responsive {margin-bottom: 15px;}
-  .featprodcs_content {margin-top: 55px;}
+  .featprodcs_content {margin-top: 45px;}
   .secondfeatures_prodsarea { margin-top: 75px;}
   .appdownload_area { margin-top: 50px;}
   .app_area { padding-bottom: 50px;}
@@ -1334,7 +1335,7 @@ img{border: none;}
 		margin-top: 0px;
 	}
   .single_features_responsive {margin-bottom: 75px;}
-  .featprodcs_content {margin-top: 75px;}
+  .featprodcs_content {margin-top: 45px;}
   .secondfeatures_prodsarea { margin-top: 75px;}
   .direction_icon { left: 30%;width: 170px;}
   .testimonial_slider ul li {margin: 0 38px 25px;}
@@ -1374,29 +1375,43 @@ img{border: none;}
 @media(max-width:640px){
  .slide_descright h1 {margin-top: 20px;}
 	h1 {
-		text-align: center
+		text-align: center;
+		font-size:40px;
 	}
 	h2 {
-		padding-left: 50px
+		/*padding-left: 50px*/
+		text-align:center;
+		margin-top:0px;
+		line-height:1.2;
 	}
 }
 
 @media(max-width:480px){
-	h1{text-align:center}
-  .direction_icon {left: 32%;}
+	h1 {
+		text-align: center;
+		font-size: 37px;
+		margin-top:10px;
+	}
+
+	.features_ara h1{font-size:45px;}
+  .direction_icon {left: 22%;width:auto}
   .slide_descright h1 {margin-top: 35px;}
   .learnmore_btn {margin: 0 25px 0px;}
+	.nextpage_btn {
+		margin: 20px auto;
+		width:250px;
+	}
 }
 
 @media(max-width:360px){
+
   .slide_descright h1 {margin-top: 40px;}
 	.download_btn {
 		margin-top: 20px;
 	}
-	.nextpage_btn {
-		margin-top: 20px;
-	}
+	
   .newsletter_left h2 {font-size: 26px;}
+  h3{padding-top:10px;}
 }
 
 @media(max-width:320px){
@@ -1411,8 +1426,8 @@ img{border: none;}
 	}
 	.nextpage_btn {
 		margin-top: 20px;
-		width: 220px;
-		font-size: 14px;
+		width: 250px;
+		font-size: 12px;
 		padding: 8px 0px;
 	}
 }
