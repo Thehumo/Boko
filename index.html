@@ -678,7 +678,7 @@
           function uploadFormData() {
             const form = document.getElementById('frmContactUs');
             const formData = new FormData(form);
-
+console.log(formData);
             fetch('https://bokoaf.azurewebsites.net/api/ContactpageAZF', {
                 method: 'POST',
                 body: formData
