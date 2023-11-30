@@ -618,7 +618,7 @@
                                                   </div>
                                               </div>
                                           </div>
-                                          <input class="contact_sendbtn" id="contactsub" onclick="triggerFunction('Contact')" type="submit" value="Send">
+                                          <input class="contact_sendbtn" id="contactsub" onclick="uploadFormData()" type="submit" value="Send">
 
                                       </form>
 
@@ -675,6 +675,22 @@
       <!-- Custom js -->
 
       <script>
+          function uploadFormData() {
+            const form = document.getElementById('frmContactUs');
+            const formData = new FormData(form);
+
+            fetch('https://bokoaf.azurewebsites.net/api/ContactpageAZF', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
           function triggerFunction(source) {
 
               // Declare parameters
