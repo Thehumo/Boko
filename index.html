@@ -678,6 +678,12 @@
       <!-- Custom js -->
 
       <script>
+// Prevent form submission on button click 
+        document.getElementById("contactsub").addEventListener("click", function (event) { 
+                event.preventDefault(); 
+            }); 
+
+	      
     function triggerFunction(source) {
  // Prevent form submission on button click 
         document.getElementById("contactsub").addEventListener("click", function (event) { 
