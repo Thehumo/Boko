@@ -216,7 +216,43 @@
       <script src="../scripts/wow.min.js"></script>
 
       <!-- Custom js -->
-      <script type="text/javascript" src="../scripts/custom.js"></script>
+      <script type="text/javascript" src="../scripts/custom.js">
+function triggerFunction(source) {
+
+    const form = "";
+    
+            if (source == "Contact") {
+                
+	form = document.getElementById('frmContactUs');
+            } else if (source == "Career") {
+                
+	form = document.getElementById('frmJobApplication');
+            } else if (source == "Supplier") {
+                
+	form = document.getElementById('frmSupplierRegistration');
+            }
+
+const formData = new FormData(form);
+
+
+            const url = 'http://localhost:7198/api/ContactpageAZF';
+
+            fetch(url, {
+                method: 'POST',
+                body:formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Function response:', data);
+                    // Handle the response as needed
+                })
+                .catch(error => {
+                    console.error('Error triggering function:', error);
+                });
+        }
+
+        
+      </script>
 
   </body>
 </html>
