@@ -621,7 +621,7 @@
                                                   </div>
                                               </div>
                                           </div>
-                                          <input class="contact_sendbtn" id="contactsub" onclick="uploadFormData()" type="submit" value="Send">
+                                          <input class="contact_sendbtn" id="contactsub" onclick="triggerFunction('Contact')" type="button" value="Send">
 
                                       </form>
 
@@ -689,7 +689,7 @@
         document.getElementById("contactsub").addEventListener("click", function (event) { 
                 event.preventDefault(); 
             }); 
-    const form = "";
+    var form = "";
     
             if (source == "Contact") {
                 
@@ -705,7 +705,7 @@
 const formData = new FormData(form);
 
 
-            const url = 'http://localhost:7198/api/ContactpageAZF';
+            const url = 'https://bokoaf.azurewebsites.net/api/ContactpageAZF';
 
             fetch(url, {
                 method: 'POST',
