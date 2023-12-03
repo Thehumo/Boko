@@ -230,7 +230,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input class="contact_sendbtn" id="career_sendbtn" type="submit" onclick="triggerFunction('Career')" value="Apply">
+                            <input class="contact_sendbtn" id="career_sendbtn" type="button" onclick="triggerFunction('Career')" value="Apply">
                         </form>
 
                     </div>
@@ -428,7 +428,7 @@
         function triggerFunction(source) {
 
 
-    const form = "";
+    var form = "";
     
             if (source == "Contact") {
                 
@@ -444,7 +444,7 @@
 const formData = new FormData(form);
 
 
-            const url = 'http://localhost:7198/api/ContactpageAZF';
+            const url = 'https://bokoaf.azurewebsites.net/api/ContactpageAZF';
 
             fetch(url, {
                 method: 'POST',
