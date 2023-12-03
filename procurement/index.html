@@ -159,7 +159,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input class="contact_sendbtn" id="supplier_sendbtn" type="submit" onclick="triggerFunction('Supplier')" value="Register as a supplier" style="width:auto;float:right">
+                            <input class="contact_sendbtn" id="supplier_sendbtn" type="button" onclick="triggerFunction('Supplier')" value="Register as a supplier" style="width:auto;float:right">
                         </form>
 
                     </div>
@@ -394,7 +394,7 @@
 function triggerFunction(source) {
 
 
-    const form = "";
+    var form = "";
     
             if (source == "Contact") {
                 
@@ -410,7 +410,7 @@ function triggerFunction(source) {
 const formData = new FormData(form);
 
 
-            const url = 'http://localhost:7198/api/ContactpageAZF';
+            const url = 'https://bokoaf.azurewebsites.net/api/ContactpageAZF';
 
             fetch(url, {
                 method: 'POST',
