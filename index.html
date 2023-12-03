@@ -679,7 +679,10 @@
 
       <script>
     function triggerFunction(source) {
-
+ // Prevent form submission on button click 
+        document.getElementById("contactsub").addEventListener("click", function (event) { 
+                event.preventDefault(); 
+            }); 
     const form = "";
     
             if (source == "Contact") {
