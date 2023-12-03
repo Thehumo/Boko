@@ -159,7 +159,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input class="contact_sendbtn" type="submit" onclick="triggerFunction('Supplier')" value="Register as a supplier" style="width:auto;float:right">
+                            <input class="contact_sendbtn" id="supplier_sendbtn" type="submit" onclick="triggerFunction('Supplier')" value="Register as a supplier" style="width:auto;float:right">
                         </form>
 
                     </div>
@@ -390,6 +390,18 @@
 
 function triggerFunction(source) {
 
+
+
+  
+        // Prevent form submission on button click 
+        document.getElementById("submit-btn").addEventListener("click", function (event) { 
+                event.preventDefault(); 
+            }); 
+
+
+
+
+	
     const form = "";
     
             if (source == "Contact") {
