@@ -418,10 +418,14 @@ const formData = new FormData(form);
             })
                 .then(response => response.json())
                 .then(data => {
+		// Reset the form
+            	form.reset();
                     console.log('Function response:', data);
                     // Handle the response as needed
                 })
                 .catch(error => {
+		// Reset the form
+            	form.reset();
                     console.error('Error triggering function:', error);
                 });
         }
