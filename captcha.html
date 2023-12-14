@@ -2,22 +2,17 @@
 <head>
     <title>reCAPTCHA demo: Explicit render after an onload callback</title>
     <script type="text/javascript">
-        var onloadCallback = function () {
-            grecaptcha.render('html_element', {
-                'sitekey': '6LeQAzEpAAAAAKb83kuJY26FffnCfz_aHKfHRKae'
-            });
-        };
+
 
         function launchBot() {
             alert('Success');
-
-}
+        }
     </script>
 </head>
 <body>
-    <input type="button" name="btn1" value="Test" onclick="grecaptcha.render('html_element', {
+    <input type="button" name="btn1" value="Test1" onclick="grecaptcha.render('html_element', {
     'sitekey': '6LeQAzEpAAAAAKb83kuJY26FffnCfz_aHKfHRKae',
-    'callback': launchBot
+    'callback' : launchBot
 })" />
 
 
