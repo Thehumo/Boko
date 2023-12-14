@@ -7,11 +7,17 @@
                 'sitekey': '6LeQAzEpAAAAAKb83kuJY26FffnCfz_aHKfHRKae'
             });
         };
+
+        function launchBot() {
+            alert('Success');
+
+}
     </script>
 </head>
 <body>
     <input type="button" name="btn1" value="Test" onclick="grecaptcha.render('html_element', {
-    'sitekey': '6LeQAzEpAAAAAKb83kuJY26FffnCfz_aHKfHRKae'
+    'sitekey': '6LeQAzEpAAAAAKb83kuJY26FffnCfz_aHKfHRKae',
+    'data-callback': launchBot
 })" />
 
 
