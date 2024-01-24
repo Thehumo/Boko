@@ -3,9 +3,11 @@
     "",
     "\\about",
     "\\career",
+    "\\contact",
+    "\\news",
     "\\procurement",
     "\\social"
   ],
-  "SelectedNode": "\\career",
+  "SelectedNode": "\\about\\index.html",
   "PreviewInSolutionExplorer": false
 }
