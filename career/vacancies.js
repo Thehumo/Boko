@@ -16,15 +16,24 @@ var opportunities = [
         pdfLink: "25012024 Advertisement Pump Attendant B1.pdf",
         description: "To safely attend to Pumps",
         expiryDate: "2024-01-31"
-    }/*,
+    },
+    {
+        title: "Senior HR Officer (CU)",
+        pdfLink: "23012024 Advertisement Senior HR Officer.pdf",
+        description: "Responsible for all HR Generalist functions in respective areas of responsibility.",
+        expiryDate: "2024-01-26"
+    }
+
+
+    /*,
             
             entry template for future use
-            {
+            ,{
               title: "",
               pdfLink: "",
               description: "",
               expiryDate: "2023-11-24"
-            },
+            }
 
 
             */
