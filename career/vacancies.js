@@ -1,7 +1,7 @@
 var opportunities = [
     {
         title: "HRD INTERNSHIP OPPORTUNITIES",
-        pdfLink: "Bokoni_Platinum Mine_HRD Adverts Q1 2024 - Internship Opportunities",
+        pdfLink: "Bokoni_Platinum Mine_HRD Adverts Q1 2024 - Internship Opportunities.pdf",
         description: "Bokoni Platinum Mine is offering opportunities to unemployed youth graduates in pursuit of gaining workplace exposure through Structured Development Plansatits Mine of the Future Mining Operation.",
         expiryDate: "2024-02-22"
     }
