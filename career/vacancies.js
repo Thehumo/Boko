@@ -17,7 +17,7 @@ var opportunities = [
         title: "PUMP ATTENDANT (B1)",
         pdfLink: "25012024 Advertisement Pump Attendant B1.pdf",
         description: "To safely attend to Pumps",
-        expiryDate: "2024-01-31"
+        expiryDate: "2024-03-31"
     }
     
 
