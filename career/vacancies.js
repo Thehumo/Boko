@@ -89,6 +89,13 @@ var opportunities = [
         description: "Assist and deliver quality work output in the day-to-day work activities, within the relevant policies, procedures and legislation.",
         expiryDate: "2024-03-12"
     }
+    ,
+    {
+        title: "Capital Accountant (DL)",
+        pdfLink: "05032024 Capital Accountant DL.pdf",
+        description: "The Capital Accountant is responsible for the effective coordination of the Capital Management process and related administration for the mine in support of the Operations Financial Manager and Management Accountant. The incumbent is responsible to collate and process financial transactions and compile reports related to all capital projects. The incumbent is also expected to ensure the completeness, accuracy and validity of all transactions.",
+        expiryDate: "2024-03-12"
+    }
     
 
 
