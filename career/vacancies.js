@@ -1,4 +1,12 @@
 var opportunities = [
+
+    {
+        title: "HT Electrician (C2)",
+        pdfLink: "Artisan HT Electrician.pdf",
+        description: "Bokoni Platinum Mine is offering opportunities to unemployed youth graduates in pursuit of gaining workplace exposure through Structured Development Plansatits Mine of the Future Mining Operation.",
+        expiryDate: "2024-03-12"
+    }
+    ,
     {
         title: "ARTISAN LEARNERSHIP OPPORTUNITIES",
         pdfLink: "Bokoni_Platinum Mine - Artisan Learnership Opportunities.pdf",
