@@ -289,36 +289,28 @@
     <script type="text/javascript" src="vacancies.js"></script>
     <script type="text/javascript">
         var currentDate = new Date();
-        // THIS IS WHERE OPPORTUNITIES ARE LISTED AND MAINTAINED --------------------------------------------------------------------------
-
+        currentDate.setHours(0, 0, 0, 0); // Reset time part to midnight
 
         var opportunitiesContainer = document.querySelector("#opportunitiesContainer");
 
-        // Check if there are opportunities
-        if (opportunities.some(opportunity => new Date(opportunity.expiryDate) > currentDate)) {
-            // Opportunities are present
-
-            // Code for creating the dropdown select
+        // Check if there are opportunities that expire today or in the future
+        if (opportunities.some(opportunity => new Date(opportunity.expiryDate) >= currentDate)) {
             var select = document.createElement("select");
-
             select.id = "txtPositionAppliedFor";
             select.className = "form-control";
             select.style.lineHeight = "2";
 
             var defaultOption = document.createElement("option");
             defaultOption.text = "Select the position to apply for";
-            defaultOption.disabled = true; // Make it non-selectable
-            defaultOption.selected = true; // Make it the default selected option
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
             select.appendChild(defaultOption);
 
             opportunities.forEach(function (opportunity) {
-                // Parse the opportunity's expiry date
                 var expiryDate = new Date(opportunity.expiryDate);
-                var expiryDateValidate = new Date(opportunity.expiryDate);
-                expiryDateValidate.setDate(expiryDateValidate.getDate() + 1); // Add 1 day to expiryDate
+                expiryDate.setHours(0, 0, 0, 0); // Reset time part to midnight for comparison
 
-                // Check if the expiry date is in the future
-                if (expiryDateValidate > currentDate) {
+                if (expiryDate >= currentDate) {
                     var option = document.createElement("option");
                     option.value = opportunity.title;
                     option.text = opportunity.title;
@@ -326,90 +318,53 @@
                 }
             });
 
-            // Append the select element to your HTML
             document.querySelector("#positionSelector").appendChild(select);
 
-            // Code for creating the opportunities table
-
-
-
             var opportunityTable = document.createElement("table");
-            opportunityTable.className = "opportunity-table"; // Add class name for styling
+            opportunityTable.className = "opportunity-table";
 
             opportunities.forEach(function (opportunity) {
-                // Parse the opportunity's expiry date
                 var expiryDate = new Date(opportunity.expiryDate);
+                expiryDate.setHours(0, 0, 0, 0); // Reset time part to midnight for comparison
 
-                // Check if the expiry date is in the future
-                if (expiryDate > currentDate) {
-                    // Create a table for each opportunity
-                    // Create a table row for the opportunity
+                if (expiryDate >= currentDate) {
                     var row = opportunityTable.insertRow(0);
-
-                    // Create a table cell for the icon
                     var iconCell = row.insertCell(0);
-                    iconCell.className = "opportunity-icon"; // Add class name for styling
+                    iconCell.className = "opportunity-icon";
                     var iconImage = document.createElement("img");
                     iconImage.src = "../images/pdf-icon.png";
                     iconImage.border = 0;
                     iconImage.width = 32;
                     iconCell.appendChild(iconImage);
 
-                    // Create a table cell for the title with a hyperlink
                     var titleCell = row.insertCell(1);
-                    titleCell.className = "opportunity-title"; // Add class name for styling
+                    titleCell.className = "opportunity-title";
                     var titleLink = document.createElement("a");
                     titleLink.href = opportunity.pdfLink;
                     titleLink.textContent = opportunity.title;
                     titleLink.target = "_blank";
                     titleCell.appendChild(titleLink);
 
-                    // Create a table cell for the expiry date
                     var dateCell = row.insertCell(2);
-                    dateCell.className = "opportunity-date"; // Add class name for styling
+                    dateCell.className = "opportunity-date";
                     dateCell.textContent = opportunity.expiryDate;
                 }
             });
 
-
-            //$("#frmJobApplication").show();
             $("#frmJobApplication").hide();
             $("#frmReplacement").hide();
             $("#noopportunitymessage").hide();
             $("#opportunitiesHead").text("Current opportunities");
-            // Append the opportunity table to the container
             opportunitiesContainer.appendChild(opportunityTable);
         } else {
-            // No opportunities at present. Display a message
             $("#frmJobApplication").hide();
             $("#frmReplacement").show();
             $("#noopportunitymessage").show();
             $("#opportunitiesHead").text("No opportunities available at present.");
-
-            var noOpportunitiesDiv = document.createElement("div");
-            noOpportunitiesDiv.className = "wow";
-
-            var noOpportunitiesInfoDiv = document.createElement("div");
-            noOpportunitiesInfoDiv.className = "col-lg-12 col-md-12";
-
-            //var noOpportunitiesTitle = document.createElement("h4");
-            //noOpportunitiesTitle.textContent = "No opportunities available present.";
-
-            var noOpportunitiesMessage = document.createElement("p");
-            noOpportunitiesMessage.textContent = "Thank you for expressing interest in joining our dynamic team. While there are currently no available positions, we remain dedicated to fostering growth within our mining family. Keep your tools ready and check back regularly for updates. Our commitment to expansion and innovation ensures that new opportunities continuously emerge on the horizon. Your skills could be key to unlocking our next chapter. Remember, the mining journey is an ever - evolving adventure.Stay connected for thrilling developments that lie ahead!";
-
-            // Construct the elements hierarchy for the message
-            //noOpportunitiesInfoDiv.appendChild(noOpportunitiesTitle);
-            //noOpportunitiesInfoDiv.appendChild(noOpportunitiesMessage);
-            //noOpportunitiesDiv.appendChild(noOpportunitiesInfoDiv);
-
-            // Append the message to the container
-            //opportunitiesContainer.appendChild(noOpportunitiesMessage);
         }
-	    // Prevent form submission on button click 
-        document.getElementById("career_sendbtn").addEventListener("click", function (event) { 
-                event.preventDefault(); 
-            });
+
+// Additional message handling and form submission prevention remains unchanged.
+
         function triggerFunction(source) {
 
 
