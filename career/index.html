@@ -314,9 +314,11 @@
             opportunities.forEach(function (opportunity) {
                 // Parse the opportunity's expiry date
                 var expiryDate = new Date(opportunity.expiryDate);
+                var expiryDateValidate = new Date(opportunity.expiryDate);
+                expiryDateValidate.setDate(expiryDateValidate.getDate() + 1); // Add 1 day to expiryDate
 
                 // Check if the expiry date is in the future
-                if (expiryDate > currentDate) {
+                if (expiryDateValidate > currentDate) {
                     var option = document.createElement("option");
                     option.value = opportunity.title;
                     option.text = opportunity.title;
